@@ -1,0 +1,132 @@
+.main2{
+    width: 100%;
+    margin: auto;
+    border: 2px solid transparent;      
+    background-color:white;
+}
+.main2 h2{
+    border: 2px solid grey; 
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    
+}
+.button-wrapper-2{
+   
+    width: 25%;
+    margin: 2%  auto 0;
+
+    padding: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0.9rem;
+}
+.main2 button{
+    margin: 1rem 1.5rem;
+    width:35%;
+    border: 2px solid transparent; 
+    color: rgb(162, 56, 56);
+    background-color:rgb(234, 195, 185)  ;
+  border-radius: 50%;
+}
+
+.img-wrapper{
+    
+    width: 25%;
+    margin: 1% auto;
+    
+    border-radius: 2%;
+
+}
+.img-contain{
+    padding:2rem 0;
+   width: 100%;
+    
+    background-color:rgb(234, 195, 185);
+
+      
+}
+.main2-subcontent-2{
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+.main2-l-img{
+    width: 50%;
+  
+}
+.main2-l-img img{
+    width: 70%;
+    border-radius: 50%;
+   
+}
+.main2-r-img{
+    width: 50%;
+    
+}
+.main2-r-img img{
+    width: 70%;
+    border-radius: 50%;
+    
+}
+.row{
+  width: auto;
+margin: auto;
+    flex-wrap: nowrap;
+    
+}
+@media (max-width:480px){
+
+    .main2 button{
+     
+      margin-left: 2rem;
+      font-size:1em;
+        width: 35%;
+        margin: auto;
+        border: 2px solid transparent; 
+        color: rgb(162, 56, 56);
+        background-color:rgb(234, 195, 185)  ;
+      border-radius: 50%;
+     
+    
+    }
+   
+    .img-contain{
+  
+  
+       
+        width: 90%;
+        margin: 1rem ;
+      
+          
+    }
+    .row{
+        width: auto;
+      margin-right: 2rem;
+        flex-wrap: nowrap;
+        
+    }
+    .img-wrapper{
+        width: 100%;
+        margin:0;
+        background-color:rgb(234, 195, 185)  ;
+       
+    
+    }
+   .content-2{
+    margin-top: 2rem;
+    padding-top: 20%;
+    
+    border-top: 10px solid rgb(234, 195, 185)  ;
+    border-radius: 50%;
+   }
+   .main2-l-img{
+    display: none;
+   }
+   .main2-r-img{
+    display: none;
+   }
+}
+ 
+    
+
+

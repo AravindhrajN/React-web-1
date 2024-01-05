@@ -1,0 +1,87 @@
+.list-card{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding-right: 1rem;
+    row-gap: 16px;
+    column-gap: 20px;
+    align-items: center;
+    width:90%;
+    margin-top: 1rem;
+    animation-duration: 1.5s;
+    animation-name:rightslide;
+    animation-iteration-count: 1;
+    float: right;
+}
+.list-card-items{
+    margin-top: 10px;
+  
+    width: 100%;
+   
+}
+.card-item-image{
+  
+    margin-top: 10px;
+    width:100%;
+  
+   
+}
+
+.card-title{
+
+    color: #005f4d;
+    font-family: "SofiaProRegular","Helvetica","Arial",sans-serif;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    text-align: left;
+
+}
+a{
+    text-decoration: blink;
+}
+.card-item-details{
+    margin: 16px 0 28px;
+}
+.card-item-title{
+    margin-bottom: 10px;
+}
+@media (max-width:480px) {
+   .list-card{
+    width:98%;
+   
+   
+}
+.card-title{
+
+    color: #005f4d;
+    font-family: "SofiaProRegular","Helvetica","Arial",sans-serif;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    text-align: center;
+
+}
+.card-tags-item{
+    text-align: center;
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 0.2rem;
+    color: orange;
+
+}
+    
+}
+@keyframes rightslide {
+    from {
+      margin-right: -100%;
+     
+    }
+  
+    to {
+       margin-right:0%; 
+     
+  }
+}
