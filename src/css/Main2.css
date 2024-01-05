@@ -78,17 +78,20 @@ margin: auto;
 
     .main2 button{
      
-      margin-left: 2rem;
+      
       font-size:1em;
-        width: 35%;
-        margin: auto;
+        width: 6em;
+        margin: 1em;
+        
         border: 2px solid transparent; 
         color: rgb(162, 56, 56);
         background-color:rgb(234, 195, 185)  ;
       border-radius: 50%;
      
+     
     
     }
+  
    
     .img-contain{
   
@@ -101,8 +104,10 @@ margin: auto;
     }
     .row{
         width: auto;
-      margin-right: 2rem;
+
+    
         flex-wrap: nowrap;
+     
         
     }
     .img-wrapper{
