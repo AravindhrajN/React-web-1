@@ -82,6 +82,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: normal;
+    border-radius: 0%;
    }
     .Leftside-content{
        align-items: center;
@@ -106,12 +107,12 @@
     }
     .Rightside-content{
      
-        width: 80%;
+        width: 90%;
         display: block;
        
        
     }
-     
+
  }
 
  @keyframes slidein {
