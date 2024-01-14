@@ -65,6 +65,8 @@ a{
    .list-card{
     width:auto;
 padding: 0%;
+column-gap: 0.2rem;
+row-gap: 0.2rem;
    
 }
 .list-card-items{
