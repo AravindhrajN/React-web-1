@@ -3,8 +3,8 @@
     display: grid;
     grid-template-columns: repeat(2,1fr);
     padding-right: 1rem;
-    row-gap: 16px;
-    column-gap: 20px;
+    row-gap: 1rem;
+    column-gap: 1rem;
     align-items: center;
     width:75%;
   
@@ -64,17 +64,20 @@ a{
 @media (max-width:480px) {
    .list-card{
     width:auto;
-   
+padding: 0%;
    
 }
 .list-card-items{
     width:auto;
+ 
+    padding: 1rem;
+    margin:0%;
 }
 .card-title{
-
+   
     color: #005f4d;
     font-family: "SofiaProRegular","Helvetica","Arial",sans-serif;
-    font-size: 1em;
+    font-size: 0.8rem;
     font-style: normal;
     font-weight: 400;
     line-height: 1;
@@ -86,15 +89,23 @@ a{
     font-size: 0.3em;
     font-style: normal;
     font-weight: 400;
-    margin-bottom: 0.1rem;
     color: orange;
+
 
 }
 .card-item-details{
     
-    width: 90%;
-    margin: 16px 0 28px;
-    padding: 0.5rem;
+    width: 100%;
+    margin: auto;
+    
+}
+.card-item-image{
+    margin: auto;
+    width: auto;
+  
+}
+.card-item-image img{
+    width: 50%;
 }
     
 }
