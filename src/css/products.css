@@ -199,10 +199,10 @@ padding: 0%;
     }
    
     .Face_products_contents h2{
-        font-size: 1em;
+        font-size: 0.8em;
     }
     .Face_products_contents p{
-        font-size: 0.7em;
+        font-size: 0.6em;
     }
     .Face_products_contents{
         padding: 1rem;
@@ -221,8 +221,8 @@ padding: 0%;
     }
     .Fproducts_image_wrapper img{
       
-        max-width: 8rem;
-         height: 8rem;
+        max-width: 6rem;
+         height: 6rem;
          margin-bottom: 0.5rem;
        
          
@@ -231,11 +231,10 @@ padding: 0%;
     
     .Fproducts_buttons button{
        margin: 0.2rem;
-        padding: 0.5rem;
-        border-radius: 0.5rem;
-        background-color: white;
-        color: brown;
-        font-size: small;
+        padding: 0.4rem;
+       
+       
+        font-size: 0.7em;
         font-weight: 600;
         border: transparent;
     
@@ -268,8 +267,8 @@ padding: 0%;
     }
     .Bproducts_image_wrapper img{
       
-        max-width: 8rem;
-         height: 8rem;
+        max-width: 6rem;
+         height: 6rem;
          margin-bottom: 0.5rem;
        
          
@@ -279,18 +278,18 @@ padding: 0%;
     .Bproducts_buttons button{
        
         margin: 0.2rem;
-        padding: 0.5rem;
+        padding: 0.4rem;
    
-        font-size: small;
+        font-size: 0.7em;
         font-weight: 600;
     
      
      }
      .Bproducts_details h2{
-             font-size: 1em;;
+             font-size: 0.8em;;
      }
      .Bproducts_details p{
-        font-size: 0.7em;;
+        font-size: 0.6em;;
 }
    
   }
