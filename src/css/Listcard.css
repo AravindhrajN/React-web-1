@@ -103,12 +103,10 @@ row-gap: 0.2rem;
 }
 .card-item-image{
     margin: auto;
-    width: auto;
+    width: 75%;
   
 }
-.card-item-image img{
-    width: 50%;
-}
+
     
 }
 @keyframes rightslide {
