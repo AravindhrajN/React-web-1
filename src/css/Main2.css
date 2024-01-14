@@ -2,13 +2,18 @@
     width: 100%;
     margin: auto;
     border: 2px solid transparent;      
-    background-color:white;
+    background-color:rgb(234, 195, 185) ;
 }
 .main2 h2{
-    border: 2px solid grey; 
-    width: 100%;
+    border:0px solid  transparent; 
+    border-top:10px solid  rgb(234, 195, 185); 
+    width: auto;
     text-align: center;
     padding: 1rem;
+    color: brown;
+font-weight: 600;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: white;
     
 }
 .button-wrapper-2{
@@ -23,10 +28,10 @@
 .main2 button{
     margin: 1rem 1.5rem;
     width:35%;
-    border: 2px solid transparent; 
-    color: rgb(162, 56, 56);
-    background-color:rgb(234, 195, 185)  ;
-  border-radius: 50%;
+    color: rgb(168, 36, 36);
+    background-color:rgb(236, 200, 190)  ;
+    padding: 2rem;
+   
 }
 
 .img-wrapper{
@@ -42,9 +47,30 @@
    width: 100%;
     
     background-color:rgb(234, 195, 185);
-
+animation:imgcontainer 6s linear infinite;
+border-image: linear-gradient(90deg, white red); 
+border-image-slice: 1;
+border-image-width: 0.2rem;
       
 }
+
+@keyframes imgcontainer {
+    0% {
+        border-image-source: linear-gradient(90deg,white, red); 
+      }
+      25% {
+        border-image-source: linear-gradient(180deg,white,red);
+      }
+      50% {
+        border-image-source: linear-gradient(270deg,white,red); 
+      }
+      75% {
+        border-image-source: linear-gradient(0deg, white, red); 
+      }
+      100% {
+        border-image-source: linear-gradient(90deg, white, red); 
+      }
+  }
 .main2-subcontent-2{
     display: flex;
     text-align: center;
@@ -52,6 +78,7 @@
 }
 .main2-l-img{
     width: 50%;
+    animation: slidebottom 1s ;
   
 }
 .main2-l-img img{
@@ -61,6 +88,7 @@
 }
 .main2-r-img{
     width: 50%;
+    animation: slidebottom 1s ;
     
 }
 .main2-r-img img{
@@ -68,25 +96,86 @@
     border-radius: 50%;
     
 }
+@keyframes slidebottom {
+    from {
+      margin-bottom: -100%;
+     
+    }
+  
+    to {
+       margin-top:0%; 
+     
+  }
+}
 .row{
   width: auto;
 margin: auto;
     flex-wrap: nowrap;
     
 }
+.Newarrival{
+    animation: newarrival 4s linear infinite;
+    border-image: linear-gradient(90deg, white, red); 
+    border-image-slice: 1;
+    border-image-width: 0.2rem;
+    
+  }
+  
+  @keyframes newarrival {
+    0% {
+        border-image-source: linear-gradient(270deg,white, red); 
+      }
+      25% {
+        border-image-source: linear-gradient(0deg,white, red);
+      }
+      50% {
+        border-image-source: linear-gradient(90deg, white, red); 
+      }
+      75% {
+        border-image-source: linear-gradient(180deg,white, red); 
+      }
+      100% {
+        border-image-source: linear-gradient(270deg, white, red); 
+      }
+  }
+  .Bestselling{
+    border-image: linear-gradient(90deg, white, red); 
+    border-image-slice: 1;
+    animation: bestselling 4s linear infinite;
+    border-image-width: 0.2rem;
+    
+  }
+  
+  @keyframes bestselling {
+    0% {
+        border-image-source: linear-gradient(90deg,white, red); 
+      }
+      25% {
+        border-image-source: linear-gradient(180deg,white , red);
+      }
+      50% {
+        border-image-source: linear-gradient(270deg, white, red); 
+      }
+      75% {
+        border-image-source: linear-gradient(0deg, white, red); 
+      }
+      100% {
+        border-image-source: linear-gradient(90deg, white, red); 
+      }
+  }
 @media (max-width:480px){
 
     .main2 button{
      
       
-      font-size:1em;
-        width: 6em;
-        margin: 1em;
-        
+      font-size:0.5rem;
+        width: 6rem;
+        margin:0.5rem;
+        padding: 0.5em;
         border: 2px solid transparent; 
         color: rgb(162, 56, 56);
         background-color:rgb(234, 195, 185)  ;
-      border-radius: 50%;
+    
      
      
     

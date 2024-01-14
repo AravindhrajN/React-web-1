@@ -41,8 +41,8 @@ return(<>
     <h2>Explore our products</h2>
     <div className="content-2">
     <div className="button-wrapper-2 row ">
-       <div className="row"> <button className="Newarrival  p-4 " onClick={()=>{handleButtonClick(false)}} >New Arrivals</button>
-        <button className="Bestselling  p-4 " onClick={()=>{handleButtonClick(true)}} >Best Selling</button></div>
+       <div className="row"> <button className="Newarrival   " onClick={()=>{handleButtonClick(false)}} >New Arrivals</button>
+        <button className="Bestselling  " onClick={()=>{handleButtonClick(true)}} >Best Selling</button></div>
     </div>
     <div className="main2-subcontent-2">
       <div className="main2-l-img">
