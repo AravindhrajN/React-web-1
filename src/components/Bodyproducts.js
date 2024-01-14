@@ -10,7 +10,7 @@ const Bodyproducts=()=>{
                     <img src="./pictures/soap-1.png" alt="soap" />
                 </div>
                 <div className="Bproducts_details">
-                    <h2>BproductName</h2><br/>
+                    <h2>BproductName</h2>
                     <p>Bproducts_description</p>
                     <pre>Price</pre>
                 </div>
@@ -24,7 +24,7 @@ const Bodyproducts=()=>{
                 <img src="./pictures/oil-1.png" alt="oil" />
                 </div>
                 <div className="Bproducts_details">
-                    <h2>BproductName</h2><br/>
+                    <h2>BproductName</h2>
                     <p>Bproducts_description</p>
                     <pre>Price</pre>
                 </div>
@@ -38,7 +38,7 @@ const Bodyproducts=()=>{
                 <img src="./pictures/bodywash-1.png" alt="bodywash" />
                 </div>
                 <div className="Bproducts_details">
-                    <h2>BproductName</h2><br/>
+                    <h2>BproductName</h2>
                     <p>Bproducts_description</p>
                     <pre>Price</pre>
                 </div>
@@ -52,7 +52,7 @@ const Bodyproducts=()=>{
                 <img src="./pictures/bodyscrub-1.png" alt="bodyscrub" />
                 </div>
                 <div className="Bproducts_details">
-                    <h2>BproductName</h2><br/>
+                    <h2>BproductName</h2>
                     <p>Bproducts_description</p>
                     <pre>Price</pre>
                 </div>

@@ -9,7 +9,7 @@ const Faceproducts=()=>{
                     <img src="./pictures/newarrival-1.png" alt='cleanser' />
                 </div>
                 <div className="Fproducts_details">
-                    <h2>FproductName</h2><br/>
+                    <h2>FproductName</h2>
                     <p>Fproducts_description</p>
                     <pre>Price</pre>
                 </div>
@@ -23,7 +23,7 @@ const Faceproducts=()=>{
                 <img src="./pictures/Moisturizer-1.png" alt='Moisturizer' />
                 </div>
                 <div className="Fproducts_details">
-                    <h2>FproductName</h2><br/>
+                    <h2>FproductName</h2>
                     <p>Fproducts_description</p>
                     <pre>Price</pre>
                 </div>
@@ -37,7 +37,7 @@ const Faceproducts=()=>{
                 <img src="./pictures/faceserum.png" alt='faceserum' />
                 </div>
                 <div className="Fproducts_details">
-                    <h2>FproductName</h2><br/>
+                    <h2>FproductName</h2>
                     <p>Fproducts_description</p>
                     <pre>Price</pre>
                 </div>
@@ -51,7 +51,7 @@ const Faceproducts=()=>{
                 <img src="./pictures/tone-1.png" alt='toner' />
                 </div>
                 <div className="Fproducts_details">
-                    <h2>FproductName</h2><br/>
+                    <h2>FproductName</h2>
                     <p>Fproducts_description</p>
                     <pre>Price</pre>
                 </div>
@@ -65,7 +65,7 @@ const Faceproducts=()=>{
                 <img src="./pictures/Sunscreen-1.png" alt='Sunscreen' />
                 </div>
                 <div className="Fproducts_details">
-                    <h2>FproductName</h2><br/>
+                    <h2>FproductName</h2>
                     <p>Fproducts_description</p>
                     <pre>Price</pre>
                 </div>
