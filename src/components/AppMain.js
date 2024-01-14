@@ -31,7 +31,7 @@ Revitalize your skin with our essential skincare lineup, meticulously chosen to 
                 </div>
             </div>
             </div>
-            <br />
+          
            <div>
             <Main2/>
            </div>

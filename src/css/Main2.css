@@ -1,6 +1,7 @@
 .main2{
     width: 100%;
     margin: auto;
+    margin-top: 2rem;
     border: 2px solid transparent;      
     background-color:rgb(234, 195, 185) ;
 }
@@ -164,7 +165,11 @@ border-image-width: 0.2rem;
       }
   }
 @media (max-width:480px){
-
+   .main2{
+    margin-top: 0%;
+    border: none;
+    padding-top: 1rem;
+   }
     .main2 button{
      
       
