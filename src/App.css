@@ -31,8 +31,12 @@
         font-weight: 200;
         letter-spacing: 1px;
         line-height: 1;
-        transition: box-shadow 0.5s ease-in-out;
+        transition: box-shadow 0.40s ease-in-out;
       
+}
+#search:focus{
+    box-shadow:0 0 0 0.2rem  rgb(31, 117, 88);
+    border: none;
 }
 
 
