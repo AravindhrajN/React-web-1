@@ -2,8 +2,6 @@
 
 
 import { useState,useEffect } from 'react';
-import { FormControl, InputGroup, } from 'react-bootstrap';
-
 
 
 
@@ -20,21 +18,22 @@ import { FormControl, InputGroup, } from 'react-bootstrap';
   }, [displayfunction, props]);
 
   return(
-  <div className='nav' >
+  <header className='header' >
   
      <h1 >MyShop</h1>
    
-    <InputGroup  className='InputGroup'>
+    <nav className='nav'>
     <button className='Products' onClick={()=> handleButtonClick(false)}> Products</button>
     <button className='Home' onClick={()=> handleButtonClick(true)}>Home </button>
 
      <button className='Tips' > Tips & Care</button>  
-    </InputGroup>
-    <FormControl className='formcontrol' 
+    </nav>
+    
+    <input type='search' id='search' 
      placeholder='Search-your-product'
    />
    
-    </div>
+    </header>
   )
 }
 

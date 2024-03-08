@@ -57,14 +57,11 @@ padding: 0%;
 }
 .Face_products_contents_wrapper{
     background-color: white;
-    display: flex;
+    display: grid;
     justify-content: center;
-   gap: 2em;
-   padding: 2rem;
-   flex-wrap: wrap;
-  
- 
-  
+    grid-template-columns: repeat(3,1fr);
+   
+   padding: 2rem ;
 }
 .Face_products_contents{
     padding: 1.5rem;
@@ -117,11 +114,11 @@ padding: 0%;
 }
 .Body_products_content_wrapper{
     background-color: white;
-    display: flex;
+    display: grid;
     justify-content: center;
-   gap: 2em;
+    grid-template-columns: repeat(3,1fr);
    padding: 2rem;
-   flex-wrap: wrap;
+ 
  
   
 }

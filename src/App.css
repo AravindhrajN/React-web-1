@@ -1,52 +1,52 @@
-.nav{
+.header{
     position: fixed;
     display: flex;
     flex-direction: row;
+    justify-content:space-evenly;
     background-color: white;
     flex-wrap: wrap;
     width: 100%;
     height: auto;
     border-bottom:1px solid rgb(31, 117, 88);
-    padding: 1em;
-    z-index: 1000;
+    padding: 0.5em;
+    z-index: 1;
     flex: 1 200px;
 }
-.nav h1{
-    width: 5%;
-  margin-left: 5rem;
+.header h1{
+    width: auto;
+    float: left;
+
 }
 
-.formcontrol{
+#search{
     
-        width: 18%;
+        width: 15%;
         border: transparent;
         border-radius: 1px;
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid green;
         background-color: none;
-        padding-bottom: 0px;
-        font-family: 'SofiaProRegular', 'Helvetica', 'Arial', sans-serif;
+        padding:0px;
+        font-family: 'Helvetica', 'Arial', sans-serif;
         font-size: 1.5rem;
         font-weight: 200;
-        letter-spacing: 0.8px;
+        letter-spacing: 1px;
         line-height: 1;
-        transition:  box-shadow .40s ease-in-out
+        transition: box-shadow 0.5s ease-in-out;
       
-}
-.formcontrol:focus{
-    box-shadow:0 0 0 0.2rem  rgb(31, 117, 88);
-    border: none;
 }
 
-.InputGroup{
-    justify-content:right;
-    width: 71%;
+
+.nav{
+    justify-content:center;
+    align-items: center;
+    width: auto;
+ 
+    padding: 10px;
 }
-  .InputGroup button  {
+  .nav button  {
          border: transparent;
-         border-bottom: 2px solid  rgb(31, 117, 88);
-       margin: 0.25rem;
-       margin-right: 3rem;
-      
+         border-bottom: 1px solid  rgb(31, 117, 88);
+         margin: 0rem 2rem;
         background-color: white;
         color: rgb(31, 117, 88);
         font-family: 'SofiaProRegular', 'Helvetica', 'Arial', sans-serif;
@@ -55,14 +55,14 @@
         letter-spacing: 0.8px;
         line-height: 1;
        padding: 1rem;
-       padding-bottom: 0.4rem;
+       padding-bottom: 0.8rem;
         cursor: pointer;
         background: linear-gradient(to right, white 50%, rgb(31, 117, 88) 50%);
         background-size: 200% 100%;
         transition: background-position  0.2s ease-in-out;
    
   }
-  .InputGroup button:hover{
+  .nav button:hover{
         color: white;
         border:  rgb(31, 117, 88);
         background-color:  rgb(31, 117, 88);
@@ -71,7 +71,7 @@
   }
  
 @media(max-width:480px){
-    .nav h1{ 
+    .header h1{ 
       
         width: 100%;
         margin: auto;
@@ -80,7 +80,7 @@
         padding: 0.2rem;
      
     }
-    .nav{
+    .header{
         display: flex;
         position:fixed;
         background:  white ;
@@ -93,7 +93,7 @@
         align-items: center;
       
     }
-    .InputGroup  {
+    .nav  {
       
        color: rgb(31, 117, 88);
        background-color: white;
@@ -107,7 +107,7 @@
      
 
     }
-    .InputGroup button {
+    .nav button {
        
         color:  rgb(31, 117, 88);
         background-color: white;
@@ -121,13 +121,13 @@
         font-size: 1em;
         
      }
-     .InputGroup button:hover{
+     .nav button:hover{
          background-color: rgb(31, 117, 88);
          color: white;
         
         
    }
-    .formcontrol{
+    .search{
      
        
         border: none;
@@ -139,7 +139,7 @@
         
         
     }
-    .formcontrol:focus{
+    .search:focus{
         box-shadow: 0 0 0 0.1rem rgb(31, 117, 88);
     }
        
