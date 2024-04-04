@@ -8,6 +8,7 @@ import './css/Main1.css';
 import './css/Listcard.css';
 import './css/Main2.css'
 import './css/products.css';
+import'./css/Apphead.css';
 import { useState } from 'react';
 
 function App() {
@@ -23,7 +24,7 @@ const handlebuttonclick=(value)=>{
 
   return (
   <div >
-    <Apphead DisplayFunction={handlebuttonclick}/><br />
+    <Apphead DisplayFunction={handlebuttonclick}/>
     {(DisplayValue) ? <AppMain />:
     <Products /> }
   </div>

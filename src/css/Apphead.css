@@ -1,0 +1,20 @@
+@media  screen and (max-width:768px){
+
+    .firstcont{
+        margin: auto;
+        flex-direction: column ;
+        align-items: center;
+     
+
+    }
+    .navbar-nav{
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    .nav-item{
+        margin: 0.3em !important;
+    }
+    .nav-link{
+        padding: 0.6em !important;
+    }
+}
