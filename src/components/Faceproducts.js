@@ -1,5 +1,6 @@
 import { useState,useEffect } from "react";
-import { Axios } from "axios";
+import axios from 'axios';
+
 
 
 
@@ -11,7 +12,7 @@ const Faceproducts=()=>{
 useEffect(() => {
     const fetchData = async () => {
         try {
-            const response = await Axios.get("https://wbp.onrender.com/api/fproduct");
+            const response = await axios.get("https://wbp.onrender.com/api/fproduct");
             setList(response.data);
         } catch (error) {
             console.error('Error fetching data:', error);
