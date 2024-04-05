@@ -12,7 +12,7 @@ const Faceproducts=()=>{
 useEffect(() => {
     const fetchData = async () => {
         try {
-            const response = await axios.get("http://localhost:8080/api/fproduct");
+            const response = await axios.get("https://wbp.onrender.com/api/fproduct");
             setList(response.data);
         } catch (error) {
             console.error('Error fetching data:', error);
