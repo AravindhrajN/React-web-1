@@ -33,7 +33,7 @@ useEffect(() => {
                           <img src="./pictures/newarrival-1.png" alt='cleanser' />
                       </div>
                       <div className="Fproducts_details">
-                          <h2>{item.Name}</h2>
+                          <h2>{item.name}</h2>
                           <p>{item.des}</p>
                           <pre>{item.price}</pre>
                       </div>
