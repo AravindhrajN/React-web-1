@@ -8,7 +8,16 @@
  
 }
 
-.img-wrapper img{
-    top:200%;
+ .sideimg{
+    bottom: 0%;
+    right: 0%;
+    border-radius: 5%;
     position:absolute;
+}
+.cardfirst{
+    top:50%;
+    left: 50%;
+    width: 50%;
+   position: absolute;
+   z-index: 1000;
 }

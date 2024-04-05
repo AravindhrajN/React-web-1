@@ -1,4 +1,4 @@
-
+import Products from "./Products";
 
 
  const Head=()=>{
@@ -22,7 +22,7 @@
               Dropdown
             </a>
             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a className="dropdown-item" href="ww.googgle.com">Action</a></li>
+              <li><button className="dropdown-item" onClick={<Products />}>Action</button></li>
               <li><a className="dropdown-item" href="ww.googgle.com">Another action</a></li>
               <li><hr className="dropdown-divider" /></li>
               <li><a className="dropdown-item" href="ww.googgle.com">Something else here</a></li>

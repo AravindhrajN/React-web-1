@@ -1,23 +1,52 @@
+import { useState,useEffect } from "react";
+import axios from "axios";
+
+
+
+
+
 const Faceproducts=()=>{
+
+    const[List,setList]=useState([]);
+
+useEffect(() => {
+    const fetchData = async () => {
+        try {
+            const response = await axios.get("http://localhost:8080/api/fproduct");
+            setList(response.data);
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
+    fetchData();
+},[])
     return(
         <div className="Face_products">
             <div className="Face_products_list_wrapper">
             <div className="Face_products_list ">
             <div className="Face_products_contents_wrapper">
-                <div  className="Face_products_contents" id="Face_products_content_1">
-                <div className="Fproducts_image_wrapper">
-                    <img src="./pictures/newarrival-1.png" alt='cleanser' />
+            { List.map(item=>(
+                <div  className="Face_products_contents"  id={item.id}>
+               
+
+                          <div className="Fproducts_image_wrapper">
+                          <img src="./pictures/newarrival-1.png" alt='cleanser' />
+                      </div>
+                      <div className="Fproducts_details">
+                          <h2>{item.Name}</h2>
+                          <p>{item.des}</p>
+                          <pre>{item.price}</pre>
+                      </div>
+                      <div className="Fproducts_buttons">
+                          <button>BUY</button>
+                          <button>CART</button>
+                      </div>
+
                 </div>
-                <div className="Fproducts_details">
-                    <h2>FproductName</h2>
-                    <p>Fproducts_description</p>
-                    <pre>Price</pre>
-                </div>
-                <div className="Fproducts_buttons">
-                    <button>BUY</button>
-                    <button>CART</button>
-                </div>
-                </div>
+               
+               ))
+              
+            }
                 <div  className="Face_products_contents" id="Face_products_content_2">
                 <div className="Fproducts_image_wrapper">
                 <img src="./pictures/Moisturizer-1.png" alt='Moisturizer' />
