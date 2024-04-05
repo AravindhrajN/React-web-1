@@ -5,7 +5,7 @@ import axios from 'axios';
 
 
 
-const Faceproducts=()=>{
+const Faceproducts=({style ,style1})=>{
 
     const[List,setList]=useState([]);
 
@@ -21,10 +21,10 @@ useEffect(() => {
     fetchData();
 },[])
     return(
-        <div className="Face_products">
+        <div className="Face_products" >
             <div className="Face_products_list_wrapper">
-            <div className="Face_products_list ">
-            <div className="Face_products_contents_wrapper">
+            <div className="Face_products_list " style={ style1 }>
+            <div className="Face_products_contents_wrapper" style={ style }>
             { List.map(item=>(
                 <div  className="Face_products_contents"  id={item.id}>
                
@@ -38,7 +38,7 @@ useEffect(() => {
                           <pre>{item.price}</pre>
                       </div>
                       <div className="Fproducts_buttons">
-                          <button>BUY</button>
+                    <Link to="/Productframe.js" target="a_blank"><button className="buy" >BUY</button></Link>
                           <button>CART</button>
                       </div>
 

@@ -15,7 +15,7 @@ const Bodyproducts=()=>{
                     <pre>Price</pre>
                 </div>
                 <div className="Bproducts_buttons">
-                    <button>BUY</button>
+                <Link to="/Productframe.js" target="a_blank"><button className="buy" >BUY</button></Link>
                     <button>CART</button>
                 </div>
                 </div>

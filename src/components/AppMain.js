@@ -1,7 +1,7 @@
 import Products from "./Products";
 
 
-const Body=()=>{
+const Appbody=()=>{
 
  return(
   <>
@@ -33,4 +33,4 @@ const Body=()=>{
      )
 }
 
-export default Body;
+export default Appbody;

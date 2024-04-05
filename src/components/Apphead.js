@@ -1,35 +1,52 @@
-import Products from "./Products";
+import { Link } from "react-router-dom";
 
 
- const Head=()=>{
 
- 
+
+ const Apphead=()=>{
+
+  const handlenav=(event)=>{
+    console.log("event"+event);
+    switch(event){
+      case "Home":
+        return  <Link to="/" />;
+      case "products":return  <Link to="/products" />;
+      case "facepro":
+        console.log("Matching case: Home");
+        return  <Link to="/facepro" />;
+      case "bodypro":return  <Link to="/bodypro" />;
+      default:
+      console.error("Invalid event:", event);
+      return null; 
+    }
+         
+  }
   return(
  
   
     <nav className="navbar navbar-expand-md navbar-light bg-danger p-3 " >
     <div className="container-fluid  firstcont">
-      <a className="navbar-brand p-1 ms-2   col-md-auto" href="ww.googgle.com">Navbar</a>
+      <button className="navbar-brand p-1 ms-2   col-md-auto" onClick={()=>handlenav("Home")}>Navbar</button>
      
       <div className="  col-md-auto" id="navbarSupportedContent">
         <ul className="navbar-nav me-auto mb-2 mb-lg-0" style={{ flexWrap:' wrap', alignItems: 'stretch',alignContent: 'space-around'}}>
           <li className="nav-item    bg-primary m-3 me-4 ms-4 border border-3 border-danger rounded-3">
-            <a className="nav-link p-3 active" aria-current="page" href="ww.googgle.com">Home</a>
+            <button className="nav-link p-3 active" aria-current="page" onClick={()=>handlenav("Home")}>Home</button>
           </li>
        
           <li className="nav-item   bg-primary  m-3 me-4 ms-4 border border-3 border-danger rounded-3 dropdown">
-            <a className="nav-link p-3 dropdown-toggle" href="ww.googgle.com" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <button className="nav-link p-3 dropdown-toggle" onClick={()=>handlenav("products")} id="navbarDropdown"  data-bs-toggle="dropdown" aria-expanded="false">
               Dropdown
-            </a>
+            </button>
             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><button className="dropdown-item" onClick={<Products />}>Action</button></li>
-              <li><a className="dropdown-item" href="ww.googgle.com">Another action</a></li>
+              <li> <Link to="/facepro" target="a_blank"><button className="dropdown-item" >Action</button></Link></li>
+              <li><button className="dropdown-item" onClick={()=>handlenav("bodypro")}>Another action</button></li>
               <li><hr className="dropdown-divider" /></li>
-              <li><a className="dropdown-item" href="ww.googgle.com">Something else here</a></li>
+              <li><button className="dropdown-item" onClick={()=>handlenav("products")}>Something else here</button></li>
             </ul>
           </li>
           <li className="nav-item   bg-primary  m-3 me-4 ms-4 border border-3 border-danger rounded-3">
-            <a className="nav-link p-3   " href="ww.googgle.com">Care&Tips</a>
+            <button className="nav-link p-3   " onClick={()=>handlenav("care&tips")}>Care&Tips</button>
           </li>
       
         </ul>
@@ -47,4 +64,4 @@ import Products from "./Products";
   )
 }
 
-export default Head;
+export default Apphead;
