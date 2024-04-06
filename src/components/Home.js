@@ -1,14 +1,16 @@
 
-import Productframe from'./Productframe';
+import Appbody from './AppMain';
+import Apphead from './Apphead';
+
 
 
 
 const Home=()=>{
 return(
 <> 
-
+     <Apphead/>
+      <Appbody/>
   
-    <Productframe />
     </>)
 }
 export default Home;

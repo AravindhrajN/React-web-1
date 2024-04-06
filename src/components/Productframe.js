@@ -1,5 +1,28 @@
+import { Link } from "react-router-dom";
+import { useLocation } from 'react-router-dom';
+
 
 const Productframe=()=>{
+
+  const location = useLocation();
+  const data = location.state;
+  const[List,setList]=useState([]);
+
+useEffect(() => {
+  const params = {
+    id: data
+  };
+    const fetchData = async () => {
+        try {
+            const response = await axios.get("https://wbp.onrender.com/api/getproduct", { params });
+            setList(response.data);
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
+    fetchData();
+},[])
+
 
     return(
    <>
@@ -8,12 +31,13 @@ const Productframe=()=>{
       <div className="row">
         <div className="col border border-2 border-primary ">
         <figure class="figure p-3">
-  <img src="./pictures/Moisturizer-1.png" class="figure-img img-fluid rounded" alt="moisture"/>
-  <figcaption class="figure-caption">A caption for the above image.</figcaption>
+  <img src="./pictures/Moisturizer-1.png" class="figure-img img-fluid rounded" alt="moisture" id={List.id}/>
+  <figcaption class="figure-caption">{List.name}</figcaption>
 </figure>
+<p>{List.price}</p>
         </div>
         <div className="col border border-2 border-success ">
-            <p>Fproducts_description </p>
+            <p>{List.des} </p>
             <div className="applytype">
                 <h4>HOW TO APPLY</h4>
                 <p>By adding gutter modifier classes, you can have control over the gutter width in as well the inline as block direction. Also requires the $enable-grid-classes Sass variable to be enabled (on by default).</p>
@@ -21,15 +45,7 @@ const Productframe=()=>{
            
         </div>
       </div>
-      <div className="row bg-danger">
-      <div className=" col quant">
-                <label for="inputquantity" >
-                    Quantity:<input type="number" id="inputquantity" min="1" max="5"/>
-                </label>
-                
-            </div>
-            <div className="col"> <p>price</p></div>
-      </div>
+   
       <div className="row  bg-success">
   
 
@@ -44,7 +60,7 @@ const Productframe=()=>{
   </div>
   <div class="col">
     <label for="validationCustom02" class="form-label">Mobile no</label>
-    <input type="tel" class="form-control" id="validationCustom02"  placeholder="+91" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required/>
+    <input type="tel" class="form-control" id="validationCustom02"  placeholder="+91" required/>
     <div class="valid-feedback">
       Looks good!
     </div>
@@ -88,12 +104,17 @@ const Productframe=()=>{
     <button class="btn btn-primary" type="submit">Submit form</button>
   </div>
 </form>
+
   </div>
   <div className="row payment p-3">
-    <div className="col p-3 text-center"><Link to="/order.js" ><button className="cash on pay" >CASH ON PAY</button></Link></div>
+    <div className="col p-3 text-center"><Link to="/order" ><button className="cash on pay" >CASH ON PAY</button></Link></div>
     <div className="col p-3 text-center"><button>ONLINE MODE</button></div>
     
   </div>
+  <form action="/order">
+  <input type="text" name="name" />
+  <input type="submit" value="/order"/>
+</form>
       </div>
     </div>
  

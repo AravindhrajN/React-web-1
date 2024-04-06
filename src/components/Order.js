@@ -1,5 +1,5 @@
 
-const order=()=>{
+const Order=()=>{
     return(
         <>
           <div className="orderwrapper">
@@ -18,4 +18,4 @@ Thank you for  choosing our product! Have a Good Day.</p></div>
     )
 
 }
-export default order;
+export default Order;

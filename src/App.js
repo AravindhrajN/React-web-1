@@ -8,6 +8,8 @@ import './css/Listcard.css';
 import './css/Main2.css'
 import './css/products.css';
 import'./css/Apphead.css';
+import Order from './components/Order';
+
 
 import {
   BrowserRouter as Router,
@@ -17,6 +19,7 @@ import {
 } from "react-router-dom";
 import Faceproducts from './components/Faceproducts';
 import Bodyproducts from './components/Bodyproducts';
+import Productframe from './components/Productframe';
 
 function App() {
 
@@ -44,6 +47,14 @@ function App() {
               <Route
                   path="/products"
                   element={<Products />}
+              ></Route>
+              <Route
+                  path="/Productframe"
+                  element={<Productframe />}
+              ></Route>
+               <Route
+                  path="/order"
+                  element={<Order />}
               ></Route>
           </Routes>
       

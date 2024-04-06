@@ -1,4 +1,21 @@
+
+
+import {useNavigate} from "react-router-dom";
+
+
+
 const Bodyproducts=()=>{
+
+    const navigate = useNavigate();
+   
+    const handleclick=(prop)=>{
+     
+
+        navigate("/Productframe", { state: {name:prop} });
+          
+    }
+   
+
     return(
         <div className="Body_products">
             <div className="Bproducts_list_wrapper">
@@ -15,7 +32,7 @@ const Bodyproducts=()=>{
                     <pre>Price</pre>
                 </div>
                 <div className="Bproducts_buttons">
-                <Link to="/Productframe.js" target="a_blank"><button className="buy" >BUY</button></Link>
+               <button className="buy" onClick={()=>handleclick('soap')} >BUY</button>
                     <button>CART</button>
                 </div>
                 </div>
@@ -29,7 +46,7 @@ const Bodyproducts=()=>{
                     <pre>Price</pre>
                 </div>
                 <div className="Bproducts_buttons">
-                    <button>BUY</button>
+                <button className="buy" onClick={()=>handleclick('oil')} >BUY</button>
                     <button>CART</button>
                 </div>
         </div>
