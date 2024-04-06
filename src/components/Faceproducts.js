@@ -12,7 +12,7 @@ const Faceproducts=({style ,style1})=>{
     const handleclick=(prop)=>{
      
 
-        navigate("/Productframe", { state: {id:prop} });
+        navigate("/Productframe", { state: {id:prop,name:'face'} });
           
     }
 

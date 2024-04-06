@@ -11,7 +11,8 @@ const Productframe=()=>{
 
 useEffect(() => {
   const params = {
-    id: data
+    id: data.id,
+    product:data.name
   };
     const fetchData = async () => {
         try {
