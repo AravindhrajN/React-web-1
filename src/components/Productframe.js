@@ -7,15 +7,15 @@ const Productframe=()=>{
   const location = useLocation();
   const data = location.state;
   const[List,setList]=useState({id:null,name:"",des:"",price:null});
-  const[senddata,setsenddata]=useState([]);
+  const[senddata,setsenddata]=useState({id:null,name:""});
   setsenddata(data);
   console.log(data);
   
 
 useEffect(() => {
   const params = {
-    id: data.id,
-    product:data.name
+    id: senddata.id,
+    product:senddata.name
   };
     const fetchData = async () => {
      
