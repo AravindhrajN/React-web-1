@@ -6,7 +6,7 @@ const Productframe=()=>{
 
   const location = useLocation();
   const data = location.state;
-  const[List,setList]=useState();
+  const[List,setList]=useState({id:null,name:"",des:"",price:null});
   console.log(data);
   
 
@@ -39,7 +39,7 @@ useEffect(() => {
       <div className="row">
         <div className="col border border-2 border-primary ">
         <figure class="figure p-3">
-  <img src="./pictures/Moisturizer-1.png" class="figure-img img-fluid rounded" alt="moisture" />
+  <img src="./pictures/Moisturizer-1.png" class="figure-img img-fluid rounded" alt="moisture" id={List.id}/>
   <figcaption class="figure-caption">{List.name}</figcaption>
 </figure>
 <p>{List.price}</p>
