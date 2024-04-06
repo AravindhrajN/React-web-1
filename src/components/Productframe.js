@@ -40,7 +40,7 @@ useEffect(() => {
     {List.map(item => ( <div className="row">
         <div className="col border border-2 border-primary ">
         <figure class="figure p-3">
-  <img src="./pictures/Moisturizer-1.png" class="figure-img img-fluid rounded" alt="moisture" id={item.id}/>
+  <img src="https://wbp.onrender.com/api/getimage" class="figure-img img-fluid rounded" alt="moisture" id={item.id}/>
   <figcaption class="figure-caption">{item.name}</figcaption>
 </figure>
 <p>{item.price}</p>
