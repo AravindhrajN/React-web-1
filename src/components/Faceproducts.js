@@ -1,13 +1,21 @@
 import { useState,useEffect } from "react";
 import axios from 'axios';
 import { Link } from "react-router-dom";
-
+import {useNavigate} from "react-router-dom";
 
 
 
 const Faceproducts=({style ,style1})=>{
 
     const[List,setList]=useState([]);
+    const navigate = useNavigate();
+   
+    const handleclick=(prop)=>{
+     
+
+        navigate("/Productframe", { state: {id:prop} });
+          
+    }
 
 useEffect(() => {
     const fetchData = async () => {
@@ -38,7 +46,7 @@ useEffect(() => {
                           <pre>{item.price}</pre>
                       </div>
                       <div className="Fproducts_buttons">
-                    <Link to="/Productframe.js" target="a_blank"><button className="buy" >BUY</button></Link>
+      <button className="buy" onClick={()=>handleclick(item.id)}  >BUY</button>
                           <button>CART</button>
                       </div>
 
