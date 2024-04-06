@@ -6,7 +6,7 @@ const Productframe=()=>{
 
   const location = useLocation();
   const data = location.state;
-  const[List,setList]=useState([]);
+  const[List,setList]=useState();
   console.log(data);
  
 
