@@ -8,22 +8,26 @@ const Productframe=()=>{
   const data = location.state;
   const[List,setList]=useState([]);
   console.log(data);
+ 
 
 useEffect(() => {
-  const params = {
-    id: data.id,
-    product:data.name
-  };
+  
     const fetchData = async () => {
+      const params = {
+        id: data.id,
+        product:data.name
+      };
         try {
             const response = await axios.get("https://wbp.onrender.com/api/getproduct", { params });
             setList(response.data);
+           
         } catch (error) {
             console.error('Error fetching data:', error);
         }
     };
     fetchData();
 },[])
+
 
 
     return(
@@ -37,6 +41,7 @@ useEffect(() => {
   <figcaption class="figure-caption">{List.name}</figcaption>
 </figure>
 <p>{List.price}</p>
+{console.log("from"+List.name)}
         </div>
         <div className="col border border-2 border-success ">
             <p>{List.des} </p>

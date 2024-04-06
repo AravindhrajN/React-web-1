@@ -46,7 +46,7 @@ useEffect(() => {
                           <pre>{item.price}</pre>
                       </div>
                       <div className="Fproducts_buttons">
-      <button className="buy" onClick={()=>handleclick(item.id)}  >BUY</button>
+      <button className="buy" onClick={()=>handleclick(item.id)} target="_ablank" >BUY</button>
                           <button>CART</button>
                       </div>
 
