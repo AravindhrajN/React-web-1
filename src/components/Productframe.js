@@ -21,7 +21,7 @@ useEffect(() => {
          
             const response = await axios.get("https://wbp.onrender.com/api/getproduct", { params });
             setList(response.data);
-            console.log("from"+List.name)
+            
            
         } catch (error) {
             console.error('Error fetching data:', error);
