@@ -7,10 +7,11 @@ const Productframe=()=>{
   const location = useLocation();
   const data = location.state;
   const[List,setList]=useState([]);
+  console.log(data);
 
 useEffect(() => {
   const params = {
-    id: data
+    id: data.id
   };
     const fetchData = async () => {
         try {
