@@ -39,7 +39,7 @@ useEffect(() => {
       <div className="row">
         <div className="col border border-2 border-primary ">
         <figure class="figure p-3">
-  <img src="./pictures/Moisturizer-1.png" class="figure-img img-fluid rounded" alt="moisture" id={List.id}/>
+  <img src="./pictures/Moisturizer-1.png" class="figure-img img-fluid rounded" alt="moisture" />
   <figcaption class="figure-caption">{List.name}</figcaption>
 </figure>
 <p>{List.price}</p>
