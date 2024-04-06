@@ -105,9 +105,9 @@ useEffect(() => {
     <div className="container m-3 border border-2 border-danger">
     {List.map(item => ( <div className="row">
         <div className="col border border-2 border-primary ">
-        <figure class="figure p-3">
-  <img src="https://wbp.onrender.com/api/getimage" class="figure-img img-fluid rounded" alt="moisture" id={item.id}/>
-  <figcaption class="figure-caption">{item.name}</figcaption>
+        <figure className="figure p-3">
+  <img src="https://wbp.onrender.com/api/getimage" className="figure-img img-fluid rounded" alt="moisture" id={item.id}/>
+  <figcaption className="figure-caption">{item.name}</figcaption>
 </figure>
 <p>{item.price}</p>
 
@@ -129,32 +129,32 @@ useEffect(() => {
     <div>
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" required/>
-      <div class="error-message" id="name-error"></div>
+      <div className="error-message" id="name-error"></div>
     </div>
     <div>
       <label for="mobile">Mobile Number:</label>
       <input type="text" id="mobile" name="mobile" required pattern="[0-9]{10}"/>
-      <div class="error-message" id="mobile-error"></div>
+      <div className="error-message" id="mobile-error"></div>
     </div>
     <div>
       <label for="street-door">Street & Door:</label>
       <input type="text" id="street-door" name="street-door" required/>
-      <div class="error-message" id="street-door-error"></div>
+      <div className="error-message" id="street-door-error"></div>
     </div>
     <div>
       <label for="city">City:</label>
       <input type="text" id="city" name="city" required/>
-      <div class="error-message" id="city-error"></div>
+      <div className="error-message" id="city-error"></div>
     </div>
     <div>
       <label for="state">State:</label>
       <input type="text" id="state" name="state" required/>
-      <div class="error-message" id="state-error"></div>
+      <div className="error-message" id="state-error"></div>
     </div>
     <div>
       <label for="pincode">Pincode:</label>
       <input type="text" id="pincode" name="pincode" required pattern="[0-9]{6}"/>
-      <div class="error-message" id="pincode-error"></div>
+      <div className="error-message" id="pincode-error"></div>
     </div>
     <button type="submit">Submit</button>
   </form>
