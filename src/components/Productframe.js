@@ -37,24 +37,24 @@ useEffect(() => {
    <>
  <div className="frame base">
     <div className="container m-3 border border-2 border-danger">
-      <div className="row">
+    {List.map(item => ( <div className="row">
         <div className="col border border-2 border-primary ">
         <figure class="figure p-3">
-  <img src="./pictures/Moisturizer-1.png" class="figure-img img-fluid rounded" alt="moisture" id={List.id}/>
-  <figcaption class="figure-caption">{List.name}</figcaption>
+  <img src="./pictures/Moisturizer-1.png" class="figure-img img-fluid rounded" alt="moisture" id={item.id}/>
+  <figcaption class="figure-caption">{item.name}</figcaption>
 </figure>
-<p>{List.price}</p>
-{console.log(List)}
+<p>{item.price}</p>
+
         </div>
         <div className="col border border-2 border-success ">
-            <p>{List.des} </p>
+            <p>{item.des} </p>
             <div className="applytype">
                 <h4>HOW TO APPLY</h4>
                 <p>By adding gutter modifier classes, you can have control over the gutter width in as well the inline as block direction. Also requires the $enable-grid-classes Sass variable to be enabled (on by default).</p>
             </div>
            
         </div>
-      </div>
+      </div>))}
    
       <div className="row  bg-success">
   
