@@ -166,10 +166,7 @@ useEffect(() => {
     <div className="col p-3 text-center"><button>ONLINE MODE</button></div>
     
   </div>
-  <form action="/order">
-  <input type="text" name="name" />
-  <input type="submit" value="/order"/>
-</form>
+ 
       </div>
     </div>
  
