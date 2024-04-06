@@ -2,12 +2,13 @@ import { Link } from "react-router-dom";
 import { useLocation } from 'react-router-dom';
 import { useState,useEffect } from "react";
 import axios from 'axios';
+
+
 const Productframe=()=>{
 
   const location = useLocation();
   const data = location.state;
   const[List,setList]=useState([]);
-  
   document.getElementById('myForm').addEventListener('submit', function(event) {
     var isValid = true;
     
@@ -76,6 +77,7 @@ const Productframe=()=>{
     }
   });
   
+ 
 
 useEffect(() => {
   const params = {
