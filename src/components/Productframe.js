@@ -8,7 +8,73 @@ const Productframe=()=>{
   const data = location.state;
   const[List,setList]=useState([]);
   
-  
+  document.getElementById('myForm').addEventListener('submit', function(event) {
+    var isValid = true;
+    
+    // Name validation
+    var nameInput = document.getElementById('name');
+    var nameError = document.getElementById('name-error');
+    if (!nameInput.value) {
+      nameError.textContent = 'Name is required';
+      isValid = false;
+    } else {
+      nameError.textContent = '';
+    }
+    
+    // Mobile number validation
+    var mobileInput = document.getElementById('mobile');
+    var mobileError = document.getElementById('mobile-error');
+    if (!mobileInput.value.match(/^\d{10}$/)) {
+      mobileError.textContent = 'Mobile number must be 10 digits';
+      isValid = false;
+    } else {
+      mobileError.textContent = '';
+    }
+    
+    // Street & Door validation
+    var streetDoorInput = document.getElementById('street-door');
+    var streetDoorError = document.getElementById('street-door-error');
+    if (!streetDoorInput.value) {
+      streetDoorError.textContent = 'Street & Door is required';
+      isValid = false;
+    } else {
+      streetDoorError.textContent = '';
+    }
+    
+    // City validation
+    var cityInput = document.getElementById('city');
+    var cityError = document.getElementById('city-error');
+    if (!cityInput.value) {
+      cityError.textContent = 'City is required';
+      isValid = false;
+    } else {
+      cityError.textContent = '';
+    }
+    
+    // State validation
+    var stateInput = document.getElementById('state');
+    var stateError = document.getElementById('state-error');
+    if (!stateInput.value) {
+      stateError.textContent = 'State is required';
+      isValid = false;
+    } else {
+      stateError.textContent = '';
+    }
+    
+    // Pincode validation
+    var pincodeInput = document.getElementById('pincode');
+    var pincodeError = document.getElementById('pincode-error');
+    if (!pincodeInput.value.match(/^\d{6}$/)) {
+      pincodeError.textContent = 'Pincode must be 6 digits';
+      isValid = false;
+    } else {
+      pincodeError.textContent = '';
+    }
+    
+    if (!isValid) {
+      event.preventDefault(); // Prevent form submission if validation fails
+    }
+  });
   
 
 useEffect(() => {
@@ -58,62 +124,41 @@ useEffect(() => {
    
       <div className="row  bg-success">
   
+      <h2>Form Validation Example</h2>
+  <form id="myForm">
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required/>
+      <div class="error-message" id="name-error"></div>
+    </div>
+    <div>
+      <label for="mobile">Mobile Number:</label>
+      <input type="text" id="mobile" name="mobile" required pattern="[0-9]{10}"/>
+      <div class="error-message" id="mobile-error"></div>
+    </div>
+    <div>
+      <label for="street-door">Street & Door:</label>
+      <input type="text" id="street-door" name="street-door" required/>
+      <div class="error-message" id="street-door-error"></div>
+    </div>
+    <div>
+      <label for="city">City:</label>
+      <input type="text" id="city" name="city" required/>
+      <div class="error-message" id="city-error"></div>
+    </div>
+    <div>
+      <label for="state">State:</label>
+      <input type="text" id="state" name="state" required/>
+      <div class="error-message" id="state-error"></div>
+    </div>
+    <div>
+      <label for="pincode">Pincode:</label>
+      <input type="text" id="pincode" name="pincode" required pattern="[0-9]{6}"/>
+      <div class="error-message" id="pincode-error"></div>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
 
-  <form class="  needs-validation" novalidate>
-  <h4>ENTER YOUR DETAILS</h4>
-  <div class="col ">
-    <label for="validationCustom01" class="form-label">Name</label>
-    <input type="text" class="form-control" id="validationCustom01" value="Mark" required />
-    <div class="valid-feedback">
-      Looks good!
-    </div>
-  </div>
-  <div class="col">
-    <label for="validationCustom02" class="form-label">Mobile no</label>
-    <input type="tel" class="form-control" id="validationCustom02"  placeholder="+91" required/>
-    <div class="valid-feedback">
-      Looks good!
-    </div>
-  </div>
-  <div class="col">
-    <label for="validationCustomUsername" class="form-label">Username</label>
-    <div class="input-group has-validation">
-      <span class="input-group-text" id="inputGroupPrepend">Street,Door no</span>
-      <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required />
-      <div class="invalid-feedback">
-        Please type a street,door no.
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <label for="validationCustom03" class="form-label">City</label>
-    <input type="text" class="form-control" id="validationCustom03" required />
-    <div class="invalid-feedback">
-      Please provide a valid city.
-    </div>
-  </div>
-  <div class="col">
-    <label for="validationCustom04" class="form-label">State</label>
-    <select class="form-select" id="validationCustom04" required>
-      <option selected disabled value="">Choose...</option>
-      <option>Tamilnadu</option>
-    </select>
-    <div class="invalid-feedback">
-      Please select a valid state.
-    </div>
-  </div>
-  <div class="col">
-    <label for="validationCustom05" class="form-label">Pincode</label>
-    <input type="text" class="form-control" id="validationCustom05" inputmode="numeric" maxlength="6" required/>
-    <div class="invalid-feedback">
-      Please provide a valid pincode.
-    </div>
-  </div>
-  
-  <div class="col">
-    <button class="btn btn-primary" type="submit">Submit form</button>
-  </div>
-</form>
 
   </div>
   <div className="row payment p-3">
@@ -131,6 +176,7 @@ useEffect(() => {
 
    </>
     )
+    
 }
 
 export default Productframe;
