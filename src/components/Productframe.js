@@ -11,14 +11,14 @@ const Productframe=()=>{
   
 
 useEffect(() => {
- 
+  const params = {
+    id: data.id,
+    product:data.name
+  };
     const fetchData = async () => {
      
         try {
-          const params = {
-            id: data.id,
-            product:data.name
-          };
+         
             const response = await axios.get("https://wbp.onrender.com/api/getproduct", { params });
             setList(response.data);
             console.log("from"+List.name)
