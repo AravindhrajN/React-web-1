@@ -7,6 +7,8 @@ const Productframe=()=>{
   const location = useLocation();
   const data = location.state;
   const[List,setList]=useState({id:null,name:"",des:"",price:null});
+  const[senddata,setsenddata]=useState([]);
+  setsenddata(data);
   console.log(data);
   
 
@@ -28,7 +30,7 @@ useEffect(() => {
         }
     };
     fetchData();
-},[data,List])
+},[senddata,List])
 
 
 
@@ -43,7 +45,7 @@ useEffect(() => {
   <figcaption class="figure-caption">{List.name}</figcaption>
 </figure>
 <p>{List.price}</p>
-
+{console.log(List)}
         </div>
         <div className="col border border-2 border-success ">
             <p>{List.des} </p>
