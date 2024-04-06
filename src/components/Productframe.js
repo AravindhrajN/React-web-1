@@ -9,73 +9,7 @@ const Productframe=()=>{
   const location = useLocation();
   const data = location.state;
   const[List,setList]=useState([]);
-  document.getElementById('myForm').addEventListener('submit', function(event) {
-    var isValid = true;
-    
-    // Name validation
-    var nameInput = document.getElementById('name');
-    var nameError = document.getElementById('name-error');
-    if (!nameInput.value) {
-      nameError.textContent = 'Name is required';
-      isValid = false;
-    } else {
-      nameError.textContent = '';
-    }
-    
-    // Mobile number validation
-    var mobileInput = document.getElementById('mobile');
-    var mobileError = document.getElementById('mobile-error');
-    if (!mobileInput.value.match(/^\d{10}$/)) {
-      mobileError.textContent = 'Mobile number must be 10 digits';
-      isValid = false;
-    } else {
-      mobileError.textContent = '';
-    }
-    
-    // Street & Door validation
-    var streetDoorInput = document.getElementById('street-door');
-    var streetDoorError = document.getElementById('street-door-error');
-    if (!streetDoorInput.value) {
-      streetDoorError.textContent = 'Street & Door is required';
-      isValid = false;
-    } else {
-      streetDoorError.textContent = '';
-    }
-    
-    // City validation
-    var cityInput = document.getElementById('city');
-    var cityError = document.getElementById('city-error');
-    if (!cityInput.value) {
-      cityError.textContent = 'City is required';
-      isValid = false;
-    } else {
-      cityError.textContent = '';
-    }
-    
-    // State validation
-    var stateInput = document.getElementById('state');
-    var stateError = document.getElementById('state-error');
-    if (!stateInput.value) {
-      stateError.textContent = 'State is required';
-      isValid = false;
-    } else {
-      stateError.textContent = '';
-    }
-    
-    // Pincode validation
-    var pincodeInput = document.getElementById('pincode');
-    var pincodeError = document.getElementById('pincode-error');
-    if (!pincodeInput.value.match(/^\d{6}$/)) {
-      pincodeError.textContent = 'Pincode must be 6 digits';
-      isValid = false;
-    } else {
-      pincodeError.textContent = '';
-    }
-    
-    if (!isValid) {
-      event.preventDefault(); // Prevent form submission if validation fails
-    }
-  });
+ 
   
  
 
@@ -171,6 +105,7 @@ useEffect(() => {
  
       </div>
     </div>
+ 
  
 
    </>
