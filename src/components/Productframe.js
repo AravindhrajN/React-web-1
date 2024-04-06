@@ -35,8 +35,10 @@ useEffect(() => {
 
 
 
+
     return(
    <>
+  
  <div className="frame base">
     <div className="container m-3 border border-2 border-danger">
     {List.map(item => ( <div className="row">
@@ -61,39 +63,41 @@ useEffect(() => {
       <div className="row  bg-success">
   
       <h2>Form Validation Example</h2>
-  <form id="myForm">
-    <div>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required/>
-      <div className="error-message" id="name-error"></div>
-    </div>
-    <div>
-      <label for="mobile">Mobile Number:</label>
-      <input type="text" id="mobile" name="mobile" required pattern="[0-9]{10}"/>
-      <div className="error-message" id="mobile-error"></div>
-    </div>
-    <div>
-      <label for="street-door">Street & Door:</label>
-      <input type="text" id="street-door" name="street-door" required/>
-      <div className="error-message" id="street-door-error"></div>
-    </div>
-    <div>
-      <label for="city">City:</label>
-      <input type="text" id="city" name="city" required/>
-      <div className="error-message" id="city-error"></div>
-    </div>
-    <div>
-      <label for="state">State:</label>
-      <input type="text" id="state" name="state" required/>
-      <div className="error-message" id="state-error"></div>
-    </div>
-    <div>
-      <label for="pincode">Pincode:</label>
-      <input type="text" id="pincode" name="pincode" required pattern="[0-9]{6}"/>
-      <div className="error-message" id="pincode-error"></div>
-    </div>
-    <button type="submit">Submit</button>
-  </form>
+
+
+      <form onSubmit={validateForm}>
+  <div>
+    <label htmlFor="name">Name:</label>
+    <input type="text" id="name" name="name" required />
+    <div className="error-message" id="name-error"></div>
+  </div>
+  <div>
+    <label htmlFor="mobile">Mobile Number:</label>
+    <input type="text" id="mobile" name="phone" required pattern="[0-9]{10}" />
+    <div className="error-message" id="mobile-error"></div>
+  </div>
+  <div>
+    <label htmlFor="city">City:</label>
+    <input type="text" id="city" name="city" required />
+    <div className="error-message" id="city-error"></div>
+  </div>
+  <div>
+    <label htmlFor="state">State:</label>
+    <input type="text" id="state" name="state" required />
+    <div className="error-message" id="state-error"></div>
+  </div>
+  <div>
+    <label htmlFor="pincode">Pincode:</label>
+    <input type="text" id="pincode" name="pincode" required pattern="[0-9]{6}" />
+    <div className="error-message" id="pincode-error"></div>
+  </div>
+  <div>
+    <label htmlFor="Address">Address:</label>
+    <textarea id="Address" name="Address" required></textarea>
+    <div className="error-message" id="address-error"></div>
+  </div>
+  <button type="submit">Submit</button>
+</form>
 
 
   </div>
@@ -112,5 +116,65 @@ useEffect(() => {
     )
     
 }
+
+const validateForm=()=> {
+  
+
+   
+  const nameInput = document.querySelector('input[name="name"]');
+  const mobileInput = document.querySelector('input[name="phone"]');
+  const stateInput = document.querySelector('input[name="state"]');
+  const cityInput = document.querySelector('input[name="city"]');
+  const pincodeInput = document.querySelector('input[name="pincode"]');
+  const addressInput = document.querySelector('textarea[name="Address"]');
+
+
+
+  const phoneRegex = /^[0-9]+$/;
+  const pincodeRegex = /^[0-9]{6}$/;
+
+
+  if (nameInput.value.trim() === "") {
+    alert("Please enter your name.");
+    nameInput.focus();
+    return false;
+  }
+
+  if (mobileInput.value.trim() === "" || !phoneRegex.test(mobileInput.value)) {
+    alert("Please enter a valid mobile number containing only numbers.");
+    mobileInput.focus();
+    return false;
+  }
+
+ 
+
+  if (stateInput.value.trim() === "") {
+    alert("Please enter your state.");
+    stateInput.focus();
+    return false;
+  }
+
+  if (cityInput.value.trim() === "") {
+    alert("Please enter your city.");
+    cityInput.focus();
+    return false;
+  }
+
+  if (pincodeInput.value.trim() === "" || !pincodeRegex.test(pincodeInput.value)) {
+    alert("Please enter a valid pincode containing only 6 digits.");
+    pincodeInput.focus();
+    return false;
+  }
+
+  if (addressInput.value.trim() === "") {
+    alert("Please enter your address.");
+    addressInput.focus();
+    return false;
+  }
+
+   return true;
+}
+
+
 
 export default Productframe;
