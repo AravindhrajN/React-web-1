@@ -106,6 +106,7 @@ setuser({name,mobile,state,city,pincode,address});
     return false;
   }
   navigate("/Ordersummary", { state: user })
+  console.log(user);
    return true;
   
 }
