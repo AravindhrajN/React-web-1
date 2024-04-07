@@ -15,7 +15,7 @@ const Productframe=()=>{
   const[user,setuser]=useState([]);
 
   const data2=user;
-  
+
 const handleclick=()=>{
    
   
@@ -35,8 +35,8 @@ console.log(data+'data1'); // Ensure that data is being received correctly
 
 useEffect(() => {
   const params = {
-    id: 200,
-    product:'name'
+    id: data.id,
+    product:data.name
   };
     const fetchData = async () => {
      
