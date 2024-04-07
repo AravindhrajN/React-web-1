@@ -2,42 +2,36 @@
 import { useLocation } from 'react-router-dom';
 import { useState,useEffect } from "react";
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 
 
 
 
 const Productframe=()=>{
 
-  const productlocation = useLocation();
-  const data = productlocation.state;
+  const location = useLocation();
+  const data = location.state;
   const[List,setList]=useState([]);
   const[user,setuser]=useState([]);
-
-  const data2=user;
+  const navigate = useNavigate();
 
 const handleclick=()=>{
-   
-  
-
-  const url = new URL('/Ordersummary', window.location.origin);
-  // Append state data as query parameters
-  url.search = new URLSearchParams(data2).toString();
-  // Open the link in a new tab using window.open
-  window.open(url.toString(), '_blank');
-  <Link to="/Productframe"></Link>
+  const data2=user;
  
+
+  navigate("/Ordersummary" , { state: data2 });
+  console.log(data2.name)
+    
 }
    
-console.log(data+'data1'); // Ensure that data is being received correctly
-console.log(data2.name+'data2');
+
  
  
 
 useEffect(() => {
   const params = {
-    id: data.id,
-    product:data.name
+    id: 200,
+    product:'name'
   };
     const fetchData = async () => {
      
@@ -182,7 +176,7 @@ setuser({name,mobile,state,city,pincode,address});
     <textarea id="Address" name="Address" rows={3} cols={6} required></textarea>
     <div className="error-message" id="address-error"></div>
   </div>
-  <button type="submit">Submit</button>
+  <button type="submit" >Submit</button>
 </form>
 
 
