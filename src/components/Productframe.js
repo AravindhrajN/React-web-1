@@ -2,7 +2,7 @@
 import { useLocation } from 'react-router-dom';
 import { useState,useEffect } from "react";
 import axios from 'axios';
-
+import { Link } from 'react-router-dom';
 
 
 
@@ -25,6 +25,7 @@ const handleclick=()=>{
   url.search = new URLSearchParams(data2).toString();
   // Open the link in a new tab using window.open
   window.open(url.toString(), '_blank');
+  <Link to="/Productframe"></Link>
  
 }
    
