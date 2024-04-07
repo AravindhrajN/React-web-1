@@ -11,12 +11,13 @@ const Productframe=()=>{
 
   const location = useLocation();
   const data = location.state;
+
   const[List,setList]=useState([]);
   const[user,setuser]=useState([]);
   const [submitForm, setSubmitForm] = useState(false);
   const navigate = useNavigate();
 
-
+console.log.apply(List.price+" price");
    
 
  
@@ -67,8 +68,8 @@ const state=stateInput.value.trim() ;
 const city=cityInput.value.trim();
 const pincode=pincodeInput.value.trim();
 const address=addressInput.value.trim();
-
-
+const sendid=data.id;
+const  sendproduct=data.name;
 
 
 
@@ -113,7 +114,7 @@ const address=addressInput.value.trim();
     addressInput.focus();
     return false;
   }
-  setuser({ name, mobile, state, city, pincode, address });
+  setuser({ name, mobile, state, city, pincode, address, sendid,sendproduct});
   setSubmitForm(true);
    
   
