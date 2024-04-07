@@ -8,7 +8,7 @@ import './css/Listcard.css';
 import './css/Main2.css'
 import './css/products.css';
 import'./css/Apphead.css';
-
+import Order from './components/Order';
 
 
 import {
@@ -56,6 +56,10 @@ function App() {
                <Route
                   path="/ordersummary"
                   element={<Ordersummary />}
+              ></Route>
+               <Route
+                  path="/order"
+                  element={<Order />}
               ></Route>
           </Routes>
       
