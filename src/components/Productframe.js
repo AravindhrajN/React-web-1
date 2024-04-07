@@ -30,8 +30,8 @@ const handleclick=()=>{
 
 useEffect(() => {
   const params = {
-    id: 200,
-    product:'name'
+    id: data.id,
+    product:data.name
   };
     const fetchData = async () => {
      
