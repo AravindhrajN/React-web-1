@@ -9,7 +9,7 @@ const Ordersummary=()=>{
   
 return(
 
-  <div className="container">
+  <div className="container-fulid">
     <div className="row" >
         <div className="col-6 col-sm-12 username"><p>{user.name}</p></div>
         <div className="col-6 col-sm-12 u_mobile"><p>{user.mobile}</p></div>
@@ -18,15 +18,15 @@ return(
         <div className="col-6 col-sm-12 u_pincode"><p>{user.pincode}</p></div>
         <div className="col-12 address"><p>{user.address}</p></div>
     </div>
-    <div className="row">
+    {List.map(item =>(<div className="row">
       <div className="col-6"></div>
       <div className="col-6">
-      <div className="col-12">{List.name}</div>
-      <div className="col-12"></div>
-      <div className="col-12"></div>
+      <div className="col-12">{item.name}</div>
+      <div className="col-12">{item.price}</div>
+      <div className="col-12">{item.name}</div>
 
       </div>
-    </div>
+    </div>))}
   </div>
 
 
