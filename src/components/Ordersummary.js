@@ -25,6 +25,8 @@ const quant=(prop)=>{
 
   const submitdata=(prop,prop2)=>{
 
+    console.log(prop+" get "+prop2);
+
     const params = {
       id: prop,
       userdata:user,
