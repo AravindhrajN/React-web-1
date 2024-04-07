@@ -15,7 +15,7 @@ const quant=(prop)=>{
     
        if(Quant>=10){
         window.alert("maxout the product to sales per customer and plz contact our support for max product");
-       }else  if(prop==-1 && Quant<=1){
+       }else  if(prop===-1 && Quant<=1){
         window.alert("minmum product reached to sales per customer");
        }else{
         
