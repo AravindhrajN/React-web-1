@@ -69,7 +69,7 @@ return(
       <div className="col-6">
       <div className="col-12">{item.name}</div>
       <div className="col-12">{item.price}</div>
-      <div className="col-12"><button onClick={quant(1)}>+</button>Quant<button onClick={quant(-1)}>-</button></div>
+      <div className="col-12"><button onClick={()=>{quant(1)}}>+</button>Quant<button onClick={()=>{quant(-1)}}>-</button></div>
 
       </div>
     </div>
