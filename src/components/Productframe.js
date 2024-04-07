@@ -17,7 +17,7 @@ const Productframe=()=>{
   const [submitForm, setSubmitForm] = useState(false);
   const navigate = useNavigate();
 
-console.log.apply(List.price+" price");
+console.log(List.price+" price");
    
 
  
