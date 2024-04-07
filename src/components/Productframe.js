@@ -108,8 +108,9 @@ const address=addressInput.value.trim();
   setuser({ name, mobile, state, city, pincode, address }, () => {
     // Navigate to Ordersummary page after user state is updated
     navigate("/Ordersummary", { state: user });
+    return true;
   });
-   return true;
+   
   
 }
 
@@ -142,7 +143,7 @@ const address=addressInput.value.trim();
       <h2>Form Validation Example</h2>
 
 
-      <form onSubmit={ validateForm} >
+      <form  >
   <div>
     <label htmlFor="name">Name:</label>
     <input type="text" id="name" name="name" required />
@@ -173,7 +174,7 @@ const address=addressInput.value.trim();
     <textarea id="Address" name="Address" rows={3} cols={6} required></textarea>
     <div className="error-message" id="address-error"></div>
   </div>
-  <button type="submit" >Submit</button>
+  <button type="submit"  onClick={validateForm}>Submit</button>
 </form>
 
 
