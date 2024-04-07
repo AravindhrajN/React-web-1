@@ -62,7 +62,7 @@ const address=addressInput.value.trim();
 
 
 
-setuser({name,mobile,state,city,pincode,address});
+
 
   const phoneRegex = /^[0-9]+$/;
   const pincodeRegex = /^[0-9]{6}$/;
@@ -105,8 +105,10 @@ setuser({name,mobile,state,city,pincode,address});
     addressInput.focus();
     return false;
   }
-  navigate("/Ordersummary", { state: user })
-  console.log(user);
+  setuser({ name, mobile, state, city, pincode, address }, () => {
+    // Navigate to Ordersummary page after user state is updated
+    navigate("/Ordersummary", { state: user });
+  });
    return true;
   
 }
