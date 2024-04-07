@@ -15,14 +15,7 @@ const Productframe=()=>{
   const[user,setuser]=useState([]);
   const navigate = useNavigate();
 
-const handleclick=()=>{
-  const data2=user;
- 
 
-  navigate("/Ordersummary" , { state: data2 });
-  console.log(data2.name)
-    
-}
    
 
  
@@ -112,7 +105,8 @@ setuser({name,mobile,state,city,pincode,address});
     addressInput.focus();
     return false;
   }
-   handleclick();
+  navigate("/Ordersummary", { state: user });
+  console.log(user.name);
    return true;
 }
 

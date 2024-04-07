@@ -4,7 +4,7 @@ const Ordersummary=()=>{
 
     const location = useLocation();
     const data = location.state;
-    console.log(data);
+    console.log(data.name);
 
 return(
 
