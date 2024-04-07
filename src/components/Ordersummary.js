@@ -1,4 +1,6 @@
-const ordersummary=()=>{
+import {useLocation} from 'react-router-dom';
+
+const Ordersummary=()=>{
 
     const location = useLocation();
     const data = location.state;
@@ -20,4 +22,4 @@ return(
 }
 
 
-export default ordersummary;
+export default Ordersummary;

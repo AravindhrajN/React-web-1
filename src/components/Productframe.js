@@ -4,14 +4,7 @@ import { useState,useEffect } from "react";
 import axios from 'axios';
 import {useNavigate} from 'react-router-dom';
 
-const navigate = useNavigate();
-const handleclick=()=>{
-   
-  const data=List;
 
-  navigate("/Ordersummary", { state: data });
-    
-}
 
 
 const Productframe=()=>{
@@ -19,7 +12,14 @@ const Productframe=()=>{
   const location = useLocation();
   const data = location.state;
   const[List,setList]=useState([]);
-  
+  const navigate = useNavigate();
+const handleclick=()=>{
+   
+  const data2=List;
+
+  navigate("/Ordersummary", { state: data2 });
+    
+}
    
 
  
@@ -47,7 +47,63 @@ useEffect(() => {
 
 
 
+const validateForm=()=> {
+  
 
+   
+  const nameInput = document.querySelector('input[name="name"]');
+  const mobileInput = document.querySelector('input[name="phone"]');
+  const stateInput = document.querySelector('input[name="state"]');
+  const cityInput = document.querySelector('input[name="city"]');
+  const pincodeInput = document.querySelector('input[name="pincode"]');
+  const addressInput = document.querySelector('textarea[name="Address"]');
+
+
+
+  const phoneRegex = /^[0-9]+$/;
+  const pincodeRegex = /^[0-9]{6}$/;
+
+
+  if (nameInput.value.trim() === "") {
+    alert("Please enter your name.");
+    nameInput.focus();
+    return false;
+  }
+
+  if (mobileInput.value.trim() === "" || !phoneRegex.test(mobileInput.value)) {
+    alert("Please enter a valid mobile number containing only numbers.");
+    mobileInput.focus();
+    return false;
+  }
+
+ 
+
+  if (stateInput.value.trim() === "") {
+    alert("Please enter your state.");
+    stateInput.focus();
+    return false;
+  }
+
+  if (cityInput.value.trim() === "") {
+    alert("Please enter your city.");
+    cityInput.focus();
+    return false;
+  }
+
+  if (pincodeInput.value.trim() === "" || !pincodeRegex.test(pincodeInput.value)) {
+    alert("Please enter a valid pincode containing only 6 digits.");
+    pincodeInput.focus();
+    return false;
+  }
+
+  if (addressInput.value.trim() === "") {
+    alert("Please enter your address.");
+    addressInput.focus();
+    return false;
+  }
+   handleclick();
+   return true;
+}
     return(
    <>
   
@@ -126,63 +182,7 @@ useEffect(() => {
     
 }
 
-const validateForm=()=> {
-  
 
-   
-  const nameInput = document.querySelector('input[name="name"]');
-  const mobileInput = document.querySelector('input[name="phone"]');
-  const stateInput = document.querySelector('input[name="state"]');
-  const cityInput = document.querySelector('input[name="city"]');
-  const pincodeInput = document.querySelector('input[name="pincode"]');
-  const addressInput = document.querySelector('textarea[name="Address"]');
-
-
-
-  const phoneRegex = /^[0-9]+$/;
-  const pincodeRegex = /^[0-9]{6}$/;
-
-
-  if (nameInput.value.trim() === "") {
-    alert("Please enter your name.");
-    nameInput.focus();
-    return false;
-  }
-
-  if (mobileInput.value.trim() === "" || !phoneRegex.test(mobileInput.value)) {
-    alert("Please enter a valid mobile number containing only numbers.");
-    mobileInput.focus();
-    return false;
-  }
-
- 
-
-  if (stateInput.value.trim() === "") {
-    alert("Please enter your state.");
-    stateInput.focus();
-    return false;
-  }
-
-  if (cityInput.value.trim() === "") {
-    alert("Please enter your city.");
-    cityInput.focus();
-    return false;
-  }
-
-  if (pincodeInput.value.trim() === "" || !pincodeRegex.test(pincodeInput.value)) {
-    alert("Please enter a valid pincode containing only 6 digits.");
-    pincodeInput.focus();
-    return false;
-  }
-
-  if (addressInput.value.trim() === "") {
-    alert("Please enter your address.");
-    addressInput.focus();
-    return false;
-  }
-   handleclick();
-   return true;
-}
 
 
 
