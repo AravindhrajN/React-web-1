@@ -41,6 +41,13 @@ useEffect(() => {
     fetchData();
 },[data])
 
+useEffect(() => {
+  if (submitForm) {
+    navigate("/Ordersummary", { state: user });
+    setSubmitForm(false); // Reset the submitForm state after navigation
+  }
+}, [submitForm, user, navigate]);
+
 
 
 const validateForm=(e)=> {
@@ -105,11 +112,8 @@ const address=addressInput.value.trim();
     addressInput.focus();
     return false;
   }
-  setuser({ name, mobile, state, city, pincode, address }, () => {
-    // Navigate to Ordersummary page after user state is updated
-    navigate("/Ordersummary", { state: user });
-  
-  });
+  setuser({ name, mobile, state, city, pincode, address });
+  setSubmitForm(true);
    
   
 }
@@ -143,7 +147,7 @@ const address=addressInput.value.trim();
       <h2>Form Validation Example</h2>
 
 
-      <form  >
+      <form onSubmit={validateForm} >
   <div>
     <label htmlFor="name">Name:</label>
     <input type="text" id="name" name="name" required />
@@ -174,7 +178,7 @@ const address=addressInput.value.trim();
     <textarea id="Address" name="Address" rows={3} cols={6} required></textarea>
     <div className="error-message" id="address-error"></div>
   </div>
-  <button type="submit"  onClick={validateForm}>Submit</button>
+  <button type="submit" >Submit</button>
 </form>
 
 
