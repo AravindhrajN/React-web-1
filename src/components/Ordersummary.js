@@ -39,7 +39,7 @@ const quant=(prop)=>{
      
       try {
          console.log(params.id);
-        const response= await axios.post("https://wbp.onrender.com/api/savedata", { params });
+        const response= await axios.post("https://wbp.onrender.com/api/savedata",  params );
          setorder(response.data);
          
           navigate("/order",{state: order});
