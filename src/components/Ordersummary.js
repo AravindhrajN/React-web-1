@@ -7,16 +7,16 @@ const Ordersummary=()=>{
   
     const location = useLocation();
     const {user,List} = location.state;
-    const[Quant,setQuant]=useState(0);
+    const[Quant,setQuant]=useState(1);
     const navigate = useNavigate();
     const [order,setorder]=useState();
 
 const quant=(prop)=>{
     
        if(Quant>=10){
-        window.alert("maxout the product sales per customer and plz contact our support for max product");
-       }else  if(Quant<=0){
-        window.alert("minout the product sales per customer");
+        window.alert("maxout the product to sales per customer and plz contact our support for max product");
+       }else  if(prop==-1 && Quant<=1){
+        window.alert("minmum product reached to sales per customer");
        }else{
         
         setQuant(prevQuant => prevQuant + prop);
