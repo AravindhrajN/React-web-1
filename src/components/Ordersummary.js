@@ -74,7 +74,7 @@ return(
       </div>
     </div>
     <div className="row">
-      <div className="col-6"><button onClick={submitdata(item.id,"cash")}>cash on pay</button></div>
+      <div className="col-6"><button onClick={()=>{submitdata(item.id,"cash")}}>cash on pay</button></div>
       <div className="col-6"><button></button></div>
     </div></>
     ))}
