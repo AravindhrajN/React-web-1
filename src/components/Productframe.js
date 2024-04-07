@@ -1,7 +1,17 @@
-import { Link } from "react-router-dom";
+
 import { useLocation } from 'react-router-dom';
 import { useState,useEffect } from "react";
 import axios from 'axios';
+import {useNavigate} from 'react-router-dom';
+
+const navigate = useNavigate();
+const handleclick=()=>{
+   
+  const data=List;
+
+  navigate("/Ordersummary", { state: data });
+    
+}
 
 
 const Productframe=()=>{
@@ -9,8 +19,10 @@ const Productframe=()=>{
   const location = useLocation();
   const data = location.state;
   const[List,setList]=useState([]);
- 
   
+   
+
+ 
  
 
 useEffect(() => {
@@ -93,7 +105,7 @@ useEffect(() => {
   </div>
   <div>
     <label htmlFor="Address">Address:</label>
-    <textarea id="Address" name="Address" required></textarea>
+    <textarea id="Address" name="Address" rows={3} cols={6} required></textarea>
     <div className="error-message" id="address-error"></div>
   </div>
   <button type="submit">Submit</button>
@@ -101,11 +113,8 @@ useEffect(() => {
 
 
   </div>
-  <div className="row payment p-3">
-    <div className="col p-3 text-center"><Link to="/order" ><button className="cash on pay" >CASH ON PAY</button></Link></div>
-    <div className="col p-3 text-center"><button>ONLINE MODE</button></div>
-    
-  </div>
+ 
+ 
  
       </div>
     </div>
@@ -171,7 +180,7 @@ const validateForm=()=> {
     addressInput.focus();
     return false;
   }
-
+   handleclick();
    return true;
 }
 

@@ -53,8 +53,8 @@ function App() {
                   element={<Productframe />}
               ></Route>
                <Route
-                  path="/order"
-                  element={<Order />}
+                  path="/ordersummary"
+                  element={<Ordersummary />}
               ></Route>
           </Routes>
       
