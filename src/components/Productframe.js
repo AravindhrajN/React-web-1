@@ -2,33 +2,41 @@
 import { useLocation } from 'react-router-dom';
 import { useState,useEffect } from "react";
 import axios from 'axios';
-import {useNavigate} from 'react-router-dom';
+
 
 
 
 
 const Productframe=()=>{
 
-  const location = useLocation();
-  const data = location.state;
+  const productlocation = useLocation();
+  const data = productlocation.state;
   const[List,setList]=useState([]);
-  const navigate = useNavigate();
+  const[user,setuser]=useState([]);
+
+  const data2=user;
+  
 const handleclick=()=>{
    
-  const data2=List;
+  
 
-  navigate("/Ordersummary", { state: data2 });
-    
+  const url = new URL('/Ordersummary', window.location.origin);
+  // Append state data as query parameters
+  url.search = new URLSearchParams(data2).toString();
+  // Open the link in a new tab using window.open
+  window.open(url.toString(), '_blank');
+  console.log(data2+'data2');
 }
    
-
+console.log(data+'data1'); // Ensure that data is being received correctly
+ 
  
  
 
 useEffect(() => {
   const params = {
-    id: data.id,
-    product:data.name
+    id: 200,
+    product:'name'
   };
     const fetchData = async () => {
      
@@ -57,20 +65,28 @@ const validateForm=()=> {
   const cityInput = document.querySelector('input[name="city"]');
   const pincodeInput = document.querySelector('input[name="pincode"]');
   const addressInput = document.querySelector('textarea[name="Address"]');
+const name=nameInput.value.trim() ;
+const mobile=mobileInput.value.trim();
+const state=stateInput.value.trim() ;
+const city=cityInput.value.trim();
+const pincode=pincodeInput.value.trim();
+const address=addressInput.value.trim();
 
 
+
+setuser({name,mobile,state,city,pincode,address});
 
   const phoneRegex = /^[0-9]+$/;
   const pincodeRegex = /^[0-9]{6}$/;
 
 
-  if (nameInput.value.trim() === "") {
+  if (name=== "") {
     alert("Please enter your name.");
     nameInput.focus();
     return false;
   }
 
-  if (mobileInput.value.trim() === "" || !phoneRegex.test(mobileInput.value)) {
+  if ( mobile=== "" || !phoneRegex.test(mobileInput.value)) {
     alert("Please enter a valid mobile number containing only numbers.");
     mobileInput.focus();
     return false;
@@ -78,25 +94,25 @@ const validateForm=()=> {
 
  
 
-  if (stateInput.value.trim() === "") {
+  if (state=== "") {
     alert("Please enter your state.");
     stateInput.focus();
     return false;
   }
 
-  if (cityInput.value.trim() === "") {
+  if (city === "") {
     alert("Please enter your city.");
     cityInput.focus();
     return false;
   }
 
-  if (pincodeInput.value.trim() === "" || !pincodeRegex.test(pincodeInput.value)) {
+  if (pincode === "" || !pincodeRegex.test(pincodeInput.value)) {
     alert("Please enter a valid pincode containing only 6 digits.");
     pincodeInput.focus();
     return false;
   }
 
-  if (addressInput.value.trim() === "") {
+  if (address === "") {
     alert("Please enter your address.");
     addressInput.focus();
     return false;
@@ -104,6 +120,7 @@ const validateForm=()=> {
    handleclick();
    return true;
 }
+
     return(
    <>
   
@@ -133,7 +150,7 @@ const validateForm=()=> {
       <h2>Form Validation Example</h2>
 
 
-      <form onSubmit={validateForm}>
+      <form onSubmit={validateForm} >
   <div>
     <label htmlFor="name">Name:</label>
     <input type="text" id="name" name="name" required />
