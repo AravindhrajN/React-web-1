@@ -25,11 +25,11 @@ const handleclick=()=>{
   url.search = new URLSearchParams(data2).toString();
   // Open the link in a new tab using window.open
   window.open(url.toString(), '_blank');
-  console.log(data2+'data2');
+ 
 }
    
 console.log(data+'data1'); // Ensure that data is being received correctly
- 
+console.log(data2.name+'data2');
  
  
 
