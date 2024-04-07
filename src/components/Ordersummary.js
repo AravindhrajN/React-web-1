@@ -27,18 +27,12 @@ const quant=(prop)=>{
 
     console.log(typeof prop+" get "+prop2);
 
-    const params = {
-      id: prop,
-      userdata:user,
-      mode:prop2,
-      quant:Quant
-
-    };
+    
 
     const fetchData = async () => {
      
       try {
-         console.log(params.id);
+       
         const response= await axios.post("https://wbp.onrender.com/api/savedata",   {
           id: prop,
           userdata: user,
@@ -46,7 +40,8 @@ const quant=(prop)=>{
           quant: Quant
       } );
          setorder(response.data);
-         
+         console.log(order);
+
           navigate("/order",{state: order});
          
       } catch (error) {
@@ -54,6 +49,10 @@ const quant=(prop)=>{
       }
   };
   fetchData();
+  fetchData().then(() => {
+    // Navigate with the updated order state
+    navigate("/order", { state: order });
+  });
 
   }
 
