@@ -108,7 +108,7 @@ const address=addressInput.value.trim();
   setuser({ name, mobile, state, city, pincode, address }, () => {
     // Navigate to Ordersummary page after user state is updated
     navigate("/Ordersummary", { state: user });
-    return true;
+  
   });
    
   
