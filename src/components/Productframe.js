@@ -17,7 +17,7 @@ const Productframe=()=>{
   const [submitForm, setSubmitForm] = useState(false);
   const navigate = useNavigate();
 
-console.log(List+" price");
+
    
 
  
@@ -45,10 +45,10 @@ useEffect(() => {
 
 useEffect(() => {
   if (submitForm) {
-    navigate("/Ordersummary", { state: user });
+    navigate("/Ordersummary", { state: {user,List} });
     setSubmitForm(false); // Reset the submitForm state after navigation
   }
-}, [submitForm, user, navigate]);
+}, [submitForm, user, navigate,List]);
 
 
 
@@ -68,8 +68,7 @@ const state=stateInput.value.trim() ;
 const city=cityInput.value.trim();
 const pincode=pincodeInput.value.trim();
 const address=addressInput.value.trim();
-const sendid=data.id;
-const  sendproduct=data.name;
+
 
 
 
@@ -114,7 +113,7 @@ const  sendproduct=data.name;
     addressInput.focus();
     return false;
   }
-  setuser({ name, mobile, state, city, pincode, address, sendid,sendproduct});
+  setuser({ name, mobile, state, city, pincode, address});
   setSubmitForm(true);
    
   
