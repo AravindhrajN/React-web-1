@@ -43,8 +43,8 @@ useEffect(() => {
 
 
 
-const validateForm=()=> {
-  
+const validateForm=(e)=> {
+  e.preventDefault(); 
 
    
   const nameInput = document.querySelector('input[name="name"]');
@@ -105,9 +105,9 @@ setuser({name,mobile,state,city,pincode,address});
     addressInput.focus();
     return false;
   }
-  navigate("/Ordersummary", { state: user });
-  console.log(user.name);
+  navigate("/Ordersummary", { state: user })
    return true;
+  
 }
 
     return(
@@ -139,7 +139,7 @@ setuser({name,mobile,state,city,pincode,address});
       <h2>Form Validation Example</h2>
 
 
-      <form onSubmit={validateForm} >
+      <form onSubmit={ validateForm} >
   <div>
     <label htmlFor="name">Name:</label>
     <input type="text" id="name" name="name" required />
