@@ -4,7 +4,7 @@ import Home from './components/Home';
 import Products from './components/Products';
 import  './App.css';
 import './css/Main1.css';
-
+import'./css/care_tips.css';
 import './css/Main2.css'
 import './css/products.css';
 import'./css/Apphead.css';
@@ -27,6 +27,7 @@ import Faceproducts from './components/Faceproducts';
 import Bodyproducts from './components/Bodyproducts';
 import Productframe from './components/Productframe';
 import Ordersummary from './components/Ordersummary';
+import Care_Tips from './components/Care&Tips';
 
 
 function App() {
@@ -106,6 +107,10 @@ const addtocart=(product)=>{
                <Route
               path="/cart"
               element={<Cart cartdata={item} />}
+          ></Route>
+           <Route
+              path="/care_tips"
+              element={<Care_Tips />}
           ></Route>
           </Routes>
       

@@ -53,7 +53,7 @@ useEffect(() => {
                           <div className="cardimg">
                           <div className="Fproducts_image_wrapper">
                           
-                          <img className="face" src={"https://wbp.onrender.com/api/getimage/"+item.id+"/face"} alt='cleanser' id="face" />
+                          <img className="face" src={"https://wbp.onrender.com/api/getimage/"+item.id+"/face"} alt={item.name} id="face" />
                    
                       <div className="back">
                       <p>{item.des}</p>

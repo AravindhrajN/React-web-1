@@ -34,7 +34,7 @@ const Section1=()=>{
   </div>
   
 
-    <button className=" maincardbts" onClick={()=>{handleclick(401,"body")}}>
+    <button className=" maincardbts" onClick={()=>{handleclick(301,"body")}}>
     Click Me</button>
 
   
@@ -62,7 +62,7 @@ const Section1=()=>{
     <p className="cardtext">Don't worry about darkness on your skin our srub products help you from it.</p>
   </div>
 
-  <button className=" maincardbts" onClick={()=>{handleclick(403,"body")}}>
+  <button className=" maincardbts" onClick={()=>{handleclick(303,"body")}}>
     Click Me</button>
 
 

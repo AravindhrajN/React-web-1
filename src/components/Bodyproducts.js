@@ -5,7 +5,7 @@ import Footer from "./AppFooter";
 
 
 const Bodyproducts=({style,style1,addcart,dis})=>{
-
+    const[List,setList]=useState([]);
    
     const handleclick=(prop)=>{
      
@@ -16,7 +16,7 @@ const Bodyproducts=({style,style1,addcart,dis})=>{
         window.open("/Productframe", '_blank');
           
     }
-    const[List,setList]=useState([]);
+  
     const addtocart=(item)=>{
         addcart(item);
   }
@@ -31,7 +31,9 @@ useEffect(() => {
             console.error('Error fetching data:', error);
         }
     };
-    fetchData();
+    if (List.length === 0) {
+        fetchData();
+    }
 },[])
    
 
