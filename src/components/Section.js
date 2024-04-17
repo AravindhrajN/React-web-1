@@ -22,7 +22,7 @@ const Section1=()=>{
   </div>
   
 
-   <button className=" maincardbts" onClick={()=>{handleclick(202,face)}}>Click Me </button>
+   <button className=" maincardbts" onClick={()=>{handleclick(202,"face")}}>Click Me </button>
 
 </div>
     </div>
@@ -34,7 +34,7 @@ const Section1=()=>{
   </div>
   
 
-    <button className=" maincardbts" onClick={()=>{handleclick(401,body)}}>
+    <button className=" maincardbts" onClick={()=>{handleclick(401,"body")}}>
     Click Me</button>
 
   
@@ -49,7 +49,7 @@ const Section1=()=>{
   </div>
 
 
-  <button className=" maincardbts" onClick={()=>{handleclick(203,face)}}>
+  <button className=" maincardbts" onClick={()=>{handleclick(203,"face")}}>
     Click Me</button>
 
 
@@ -62,7 +62,7 @@ const Section1=()=>{
     <p className="cardtext">Don't worry about darkness on your skin our srub products help you from it.</p>
   </div>
 
-  <button className=" maincardbts" onClick={()=>{handleclick(403,body)}}>
+  <button className=" maincardbts" onClick={()=>{handleclick(403,"body")}}>
     Click Me</button>
 
 
