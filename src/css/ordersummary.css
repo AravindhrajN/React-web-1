@@ -154,6 +154,14 @@ width: 100%;
 }
  
 @media screen and (max-width:768px){
+  .contwrap {
+    align-items: stretch;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+}
   .addwrap{
     padding: 1%;
     align-items: normal;
@@ -203,7 +211,9 @@ color: rgb(4, 133, 90);
 
  }
  .procont {
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   color:#121506;
   font-size: 0.8rem;
 

@@ -59,7 +59,7 @@ return(
   
 
 
-<div className="col-6 " style={{ backgroundColor: "rgb(234, 236, 129)"}}>
+<div className="col col-sm-6 " style={{ backgroundColor: "rgb(234, 236, 129)"}}>
 <h2 className='headorder' >Order_</h2>
   {List.map(item =>( <><div className="row content g-0 " key={item.id}> 
 
@@ -71,7 +71,7 @@ return(
       <div className="col procont   ">
       <div className="col"><h2>{item.name}</h2></div>
       <div className="col price">₹{item.price}</div>
-   <div className="col quant">  Quantity:<div className="p-2"><button onClick={()=>{quant(1)}}>+</button>{Quant}<button onClick={()=>{quant(-1)}}>-</button></div>
+   <div className="col quant"> <p>Quantity:</p> <div className="p-2"><button onClick={()=>{quant(1)}}>+</button><p>{Quant}</p><button onClick={()=>{quant(-1)}}>-</button></div>
 
    </div> 
     </div>
@@ -84,7 +84,7 @@ return(
 </div></>
     ))}
   </div>
-  <div className="col-6  " style={{ backgroundColor: "#f2b696bd"}}>
+  <div className="col col-sm-6  " style={{ backgroundColor: "#f2b696bd"}}>
 <h2 className='headsummary'>_Summary</h2>
   <div className="row g-0 ">
 <div className="col add">
