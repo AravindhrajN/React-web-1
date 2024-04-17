@@ -34,7 +34,9 @@ useEffect(() => {
             console.error('Error fetching data:', error);
         }
     };
-    fetchData();
+    if (List.length === 0) {
+        fetchData();
+    }
 
 },[List])
     return(<>
