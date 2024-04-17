@@ -153,15 +153,8 @@ width: 100%;
   color:white;
 }
  
-@media screen and (max-width:768px){
-  .contwrap {
-    align-items: stretch;
-    border: none;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    position: relative;
-}
+@media screen and(min-width:576px) and (max-width:768px){
+
   .addwrap{
     padding: 1%;
     align-items: normal;
@@ -181,7 +174,7 @@ width: 100%;
   align-items: baseline;
   display: flex;
   flex-direction: row;
-
+  word-break: break-all;
   padding: 2%;
 border: none;
  margin: 1%;
@@ -280,6 +273,58 @@ color: #f05d0ed1;
  padding: 4% 0%;
   text-align: start;
  
+}
+
+}
+@media screen and (max-width:575px){
+  .contwrap {
+    align-items: stretch;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+}
+.procont button {
+  background-color: #f6efe8;
+  border: 2px solid transparent;
+  border-radius: 5%;
+  color: #235102;
+  font-family: fantasy;
+  font-size: 1rem;
+  margin:3%;
+  /* width: 30%; */
+  width: 100%;
+  padding: 0% 20%;
+}
+.quant p{
+  margin: auto;
+  width: fit-content;
+}
+.quant p:last-child{
+  
+    /* margin-bottom: 1rem; */
+    /* margin-top: 0; */
+    margin: 10%;
+    font-size: large;
+
+}
+.quant div{
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+
+}
+.userdata {
+  font-size: 1rem;
+  align-items: baseline;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  margin: 1%;
+  padding: 2%;
+  word-break: break-all;
 }
 
 }
