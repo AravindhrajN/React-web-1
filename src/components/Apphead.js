@@ -24,7 +24,7 @@ import { Link } from "react-router-dom";
        
           <li className="nav-item    m-3 me-4 ms-4  dropdown">
             <button className="nav-link p-3 dropdown-toggle"  id="navbarDropdown"  data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
+              products
             </button>
             <ul className="dropdown-menu " aria-labelledby="navbarDropdown">
               <li> <Link to="/facepro" target="a_blank" style={{textDecorationLine:"none"}}><button className="dropdown-item " >Face products</button></Link></li>
