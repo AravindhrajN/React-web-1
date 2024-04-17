@@ -97,6 +97,7 @@
     }
     .maincard .card-title{
         margin-top: 5%;
+        font-size: 1.5rem;
         font-weight: bolder;
         font-family: fantasy;
  }
@@ -105,13 +106,13 @@
 
  .maincard .cardtext{
      font-family: cursive;
-     font-size: 1.5rem;
+    
      margin-bottom: 0%;
  }
  
 
  .maincard{
-    padding:1% 4%;
+    padding:1% %;
  }
  .maincardbts {
  width: fit-content;
