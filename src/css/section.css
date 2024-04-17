@@ -1,0 +1,130 @@
+.Mainprocard{
+    padding:5%;
+  
+}
+.contcard{
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(17, 74, 80, 0.821);
+   padding-bottom: 5%;
+}
+.maincardwrapper{
+    border: 0cap !important;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+   
+}
+.maincard .card-title{
+       font-size: 2rem;
+       font-family: fantasy;
+}
+.maincard .cardtext{
+    font-family: cursive;
+    
+}
+.maincardbts {
+    width: fit-content;
+    padding: 2%;
+       margin: 5% auto;
+       font-size: normal;
+       background-color: red;
+       border: 2px solid red;
+       border-radius: 10%;
+       color: aliceblue;
+   }
+   
+  
+@media screen and (min-width:576px) and (max-width:768px) {
+
+    .contcard{
+        display: flex;
+        flex-direction: row;
+        
+    }
+    .Mainprocard{
+        width: 50%;
+        
+    }
+    .Mainprocard .card {
+        width: 75%;
+        height: 90%;
+        margin: auto;
+        margin-top:10% ;
+    }
+    .maincard .card-title{
+        font-size: 1rem;
+        font-family: fantasy;
+ }
+ .Mainprocard{
+    padding:1%;
+}
+
+
+ .maincard .cardtext{
+     font-family: cursive;
+     font-size: 0.5rem;
+ }
+ .maincardbts {
+    width: fit-content;
+    padding: 5%;
+       margin: auto;
+       font-size: xx-small;
+       background-color: red;
+       border: 2px solid red;
+       border-radius: 10%;
+ 
+    
+      color: aliceblue;
+    
+   }
+}
+@media screen and (min-width:300px) and (max-width:575px) {
+
+    .contcard{
+        display: flex;
+        flex-direction: column;
+       
+        
+    }
+    .Mainprocard{
+        width: 50%;
+     
+    }
+    .Mainprocard .card {
+        width: 90%;
+        height: 100%;
+     margin: auto;
+
+    }
+    .maincard .card-title{
+        margin-top: 5%;
+        font-size: 1.2rem;
+        font-family: fantasy;
+ }
+ 
+
+
+ .maincard .cardtext{
+     font-family: cursive;
+     font-size:0.6rem;
+     margin-bottom: 0%;
+ }
+ 
+
+ .maincard{
+    padding:0% 5%;
+ }
+ .maincardbts {
+ width: fit-content;
+ padding: 2%;
+   margin: 2% auto;
+    font-size: xx-small;
+    background-color: red;
+    border: 2px solid red;
+    border-radius: 10%;
+
+ 
+   color: aliceblue;
+ 
+}
+
+}

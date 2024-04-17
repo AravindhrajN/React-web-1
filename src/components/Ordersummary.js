@@ -1,15 +1,15 @@
 import { useState } from 'react';
 import { useLocation,useNavigate} from 'react-router-dom'
 import axios from 'axios';
-
+import Footer from './AppFooter';
 
 const Ordersummary=()=>{
   
     const location = useLocation();
-    const {user,List} = location.state;
+    const {user,List,data} = location.state;
     const[Quant,setQuant]=useState(1);
     const navigate = useNavigate();
-    const [order,setorder]=useState();
+    
 
 const quant=(prop)=>{
     
@@ -23,13 +23,10 @@ const quant=(prop)=>{
        }
 }
 
-  const submitdata=(prop,prop2)=>{
+  const submitdata=async (prop,prop2)=>{
 
-    console.log(typeof prop+" get "+prop2);
 
-    
-
-    const fetchData = async () => {
+   
      
       try {
        
@@ -39,54 +36,84 @@ const quant=(prop)=>{
           mode: prop2,
           quant: Quant
       } );
-         setorder(response.data);
-         console.log(order);
+        
+         navigate("/order", { state: response.data });
 
-          navigate("/order",{state: order});
+    }
          
-      } catch (error) {
+       catch (error) {
           console.error('Error fetching data:', error);
       }
   };
-  fetchData();
-  fetchData().then(() => {
-    // Navigate with the updated order state
-    navigate("/order", { state: order });
-  });
+  
 
-  }
+
+  
 
   
 return(
+<>
+  <div className="container-fulid  contwrap ">
+ 
 
-  <div className="container-fulid">
-    <div className="row" >
-      <div className="col-6">
-        <div className="col-6 col-sm-12 username"><p>{user.name}</p></div>
-        <div className="col-6 col-sm-12 u_mobile"><p>{user.mobile}</p></div>
-        <div className="col-6 col-sm-12 u_city"><p>{user.city}</p></div>
-        <div className="col-6 col-sm-12 u_state"><p>{user.state}</p></div>
-        <div className="col-6 col-sm-12 u_pincode"><p>{user.pincode}</p></div>
-        <div className="col-12 address"><p>{user.address}</p></div>
+  
+
+
+<div className="col-6 " style={{ backgroundColor: "rgb(234, 236, 129)"}}>
+<h2 className='headorder' >Order_</h2>
+  {List.map(item =>( <><div className="row content g-0 " key={item.id}> 
+
+      <div className="col fig " > <figure className="figure p-1" >
+  <img src={"https://wbp.onrender.com/api/getimage/"+item.id+"/"+data.name} className="figure-img img-fluid rounded" alt="moisture" id={item.id} name={item.name} />
+
+</figure></div>
+<div className="col p-1">
+      <div className="col procont   ">
+      <div className="col"><h2>{item.name}</h2></div>
+      <div className="col price">₹{item.price}</div>
+   <div className="col quant">  Quantity:<div className="p-2"><button onClick={()=>{quant(1)}}>+</button>{Quant}<button onClick={()=>{quant(-1)}}>-</button></div>
+
+   </div> 
     </div>
     </div>
-    {List.map(item =>(<><div className="row">
-      <div className="col-6"></div>
-      <div className="col-6">
-      <div className="col-12">{item.name}</div>
-      <div className="col-12">{item.price}</div>
-      <div className="col-12"><button onClick={()=>{quant(1)}}>+</button>Quant:{Quant}<button onClick={()=>{quant(-1)}}>-</button></div>
-
-      </div>
-    </div>
-    <div className="row">
-      <div className="col-6"><button onClick={()=>{submitdata(item.id,"cash")}}>cash on pay</button></div>
-      <div className="col-6"><button></button></div>
-    </div></>
-    ))}
-
   </div>
+  <div className="row  payment m-2 " >
 
+  <button onClick={()=>{submitdata(item.id,"cash")}}>cash on pay</button>
+<button>Pay Online</button>
+</div></>
+    ))}
+  </div>
+  <div className="col-6  " style={{ backgroundColor: "#f2b696bd"}}>
+<h2 className='headsummary'>_Summary</h2>
+  <div className="row g-0 ">
+<div className="col add">
+  <div className="row  g-0  addwrap"  >
+      <h2>Customer_Details</h2>
+      <div className="col  userdata" >
+    
+      <div className='col text' >{user.name}</div>
+        <div className="col text">{user.mobile}</div>
+       
+    </div>
+    <div className="col  userdata" >
+   
+      <div className="col text">{user.city}</div>
+      <div className="col text"> {user.state}</div>
+      <div className="col text">{user.pincode}</div>
+  
+  </div>
+  <div className="col  userdata" >
+    
+   <div className="col text border-0">{user.address}</div>
+</div>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <Footer />
+</>
 
 )
 

@@ -1,31 +1,33 @@
-import Products from "./Products";
 
 
 const Appbody=()=>{
 
  return(
   <>
-        <div className='Maincontent-1  bg-light border border-2 border-secondary rounded-3'>
+        <div className='Maincontent-1 ' >
         <div className="backimg-wrapper">
-              <img src="./pictures/back-1.jpg" alt="ingri" className="backimg"/>
+              <img src="./pictures/backimg1.jpg" alt="ingri" className="backimg"/>
            
             
-              <img src="./pictures/ingri.jpg" alt="ingri" className="sideimg"/>
+            
               <div className="card cardfirst">
-  <div className="card-header ">
-    Quote
-  </div>
+
   <div className="card-body">
-    <blockquote className="blockquote mb-0">
-      <p>A well-known quote, contained in a blockquote element.</p>
-      <footer className="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+    <blockquote className="blockquote ">
+      <p>
+"Your natural products are like a breath of fresh air in a crowded market. They embody purity, authenticity, and a genuine commitment to wellness. They're not just products; they're a testament to the beauty and power of nature." </p>
+      <footer className="blockquote-footer">Customer  <cite title="Source Title">Jora</cite></footer>
     </blockquote>
   </div>
 </div>
             </div> 
+             <div className="ingri">
+            <p>Most essential natural ingredients are added for beautiful skin.</p>
+            <img src="./pictures/ingri1.png" alt="ingri" className="sideimg"/> <img src="./pictures/ingri2.png" alt="ingri" className="sideimg2"/>
+             </div>
            </div>
            
-           <Products />
+         
             </>
             
       

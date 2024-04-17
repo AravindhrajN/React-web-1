@@ -1,86 +1,84 @@
+import { useState,useEffect } from "react";
+import axios from 'axios';
+import Apphead from "./Apphead";
+import Footer from "./AppFooter";
 
 
-import {useNavigate} from "react-router-dom";
+const Bodyproducts=({style,style1,addcart,dis})=>{
 
-
-
-const Bodyproducts=()=>{
-
-    const navigate = useNavigate();
    
     const handleclick=(prop)=>{
      
+        const data1={id:prop,name:'body'}
 
-        navigate("/Productframe", { state: {name:prop} });
+        localStorage.setItem('Data', JSON.stringify(data1));
+
+        window.open("/Productframe", '_blank');
           
     }
+    const[List,setList]=useState([]);
+    const addtocart=(item)=>{
+        addcart(item);
+  }
+
+useEffect(() => {
+    const fetchData = async () => {
+        try {
+            const response = await axios.get("https://wbp.onrender.com/api/bproduct");
+            const updatedData = response.data.map(item => ({ ...item, prodata: 'body' }));
+            setList(updatedData);
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
+    fetchData();
+},[])
    
 
     return(
+        <>
+
         <div className="Body_products">
+        <div className="bodyhead" style={dis}><Apphead bg={{backgroundColor:"grey"}}/></div>
             <div className="Bproducts_list_wrapper">
-                <div className="Bproducts_list">
-                <div className="Body_products_content_wrapper">
-            <div className="Body_products_content"  id="Bproduct_content_1">
+                <div className="Bproducts_list" style={ style }>
+                <div className="Body_products_content_wrapper" style={ style }>
+                { List.map(item=>(
+                <div  className="Body_products_content" style={ style1 }  id={item.id}>
+                   
+                         
+                          <div className="cardimg">
+                          <div className="Bproducts_image_wrapper">
+                          
+                          <img className="face" src={"https://wbp.onrender.com/api/getimage/"+item.id+"/body"} alt={item.name} id="back" />
+                   
+                      <div className="back">
+                      <p>{item.des}</p>
+                      </div>
+                     
+                </div>
+                </div>
+                      <div className="Fproducts_details" style={{width:"fit-content"}}>
+                          <h2 style={{width:"fit-content"}}>{item.name}</h2>
+                         
+                          <pre style={{width:"fit-content"}}>₹{item.price}</pre>
+                      </div>
+                      <div className="Fproducts_buttons" style={{width:"fit-content"}}>
+      <button className="buy" onClick={()=>handleclick(item.id)} target="_ablank" >BUY</button>
+      <button  onClick={()=>addtocart(item)}>CART</button>
+                      </div> </div>
+                      
+               
+               ))
               
-                <div className="Bproducts_image_wrapper">
-                    <img src="./pictures/soap-1.png" alt="soap" />
-                </div>
-                <div className="Bproducts_details">
-                    <h2>BproductName</h2>
-                    <p>Bproducts_description</p>
-                    <pre>Price</pre>
-                </div>
-                <div className="Bproducts_buttons">
-               <button className="buy" onClick={()=>handleclick('soap')} >BUY</button>
-                    <button>CART</button>
-                </div>
-                </div>
-                <div className="Body_products_content "id="Bproducts_content_2">
-                <div className="Bproducts_image_wrapper">
-                <img src="./pictures/oil-1.png" alt="oil" />
-                </div>
-                <div className="Bproducts_details">
-                    <h2>BproductName</h2>
-                    <p>Bproducts_description</p>
-                    <pre>Price</pre>
-                </div>
-                <div className="Bproducts_buttons">
-                <button className="buy" onClick={()=>handleclick('oil')} >BUY</button>
-                    <button>CART</button>
-                </div>
-        </div>
-        <div className="Body_products_content "id="Bproducts_content_3">
-                <div className="Bproducts_image_wrapper">
-                <img src="./pictures/bodywash-1.png" alt="bodywash" />
-                </div>
-                <div className="Bproducts_details">
-                    <h2>BproductName</h2>
-                    <p>Bproducts_description</p>
-                    <pre>Price</pre>
-                </div>
-                <div className="Bproducts_buttons">
-                    <button>BUY</button>
-                    <button>CART</button>
-                </div>
-                </div>
-                <div className="Body_products_content "id="Bproducts_content_4">
-                <div className="Bproducts_image_wrapper">
-                <img src="./pictures/bodyscrub-1.png" alt="bodyscrub" />
-                </div>
-                <div className="Bproducts_details">
-                    <h2>BproductName</h2>
-                    <p>Bproducts_description</p>
-                    <pre>Price</pre>
-                </div>
-                <div className="Bproducts_buttons">
-                    <button>BUY</button>
-                    <button>CART</button>
-                </div>
-                </div>
+            }
+          
             </div></div>
             </div>
         </div>
+        <div className="bodyfoot" style={dis}><Footer/></div>
+
+        </>
     )
 }
 export default Bodyproducts;

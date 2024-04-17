@@ -1,0 +1,126 @@
+.carthead{
+    display: flex;
+    align-items: center;
+    padding: 2%  5% ;
+    justify-content: space-between;
+    border-bottom:2px solid rgb(182, 177, 177);
+
+}
+.carthead h1{
+     
+    font-family:fantasy;
+    color:rgb(14, 46, 142)
+
+}
+.carthead button{
+    color: red;
+    padding: 1%;
+    border:2px solid red;
+    border-radius: 5%;
+    background-color: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+
+}
+.carthead button:hover{
+    color: white;
+    padding: 1%;
+    border:2px solid red;
+    border-radius: 5%;
+    background-color: red;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.cartfig{
+    
+    width:10%;
+}
+.cartfig img{
+
+    width: 80%;
+}
+.cartwrapper{
+    padding: 2%;
+}
+.cartitem{
+    display: flex;
+
+    align-items: baseline;
+    justify-content: space-around;
+
+    
+}
+.cartitem p:nth-child(2){
+    font-family:cursive;
+    font-size: large;
+}
+.cartitem p:nth-child(3){
+    font-family:cursive;
+    color: rgb(8, 181, 45);
+}
+.quantity{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-items: baseline;
+    justify-content: space-between;
+}
+.quantity p{
+    padding: 2%;
+    margin:0% 30%;
+}
+.quantity button{
+
+    padding:0% 20% ;
+    border: 2px solid green;
+    border-radius: 10%;
+    color: rgb(8, 92, 6);
+    background-color: rgb(255, 255, 255);
+}
+.quantity button:hover{
+
+
+    background-color: rgb(6, 123, 4);
+    color: rgb(255, 255, 255);
+}
+.quantity button:nth-last-child(1){
+
+    padding:0% 25%;
+   
+    border: 2px solid red;
+    border-radius: 10%;
+    color: red;
+
+    background-color: rgb(255, 255, 255);
+}
+.quantity button:nth-last-child(1):hover{
+
+
+
+
+    background-color: red;
+
+    color: rgb(255, 255, 255);
+    
+}
+.purchase{
+    width: 20%;
+    display: flex;
+  justify-content: space-evenly;
+}
+.purchase .buy{
+    
+    background-color: rgb(10, 196, 6);
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(10, 196, 6);
+    padding:5% 8%;
+    border-radius: 8%;
+}
+.purchase .remove{
+    border: 2px solid red;
+    padding:1% 5%;
+    border-radius: 8%;
+    color: white;
+    background-color: red;
+}

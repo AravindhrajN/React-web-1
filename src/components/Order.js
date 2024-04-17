@@ -1,14 +1,13 @@
 
 //import axios from 'axios';
 import {useLocation} from "react-router-dom";
-
-
+import Footer from "./AppFooter";
 
 const Order=()=>{
  
     const location = useLocation();
-    const order = location.state;
-  console.log(order);
+    const orders = location.state;
+
 
   //*useEffect(()=>{
      //   const fetchData= async()=>{
@@ -22,20 +21,28 @@ const Order=()=>{
 
 
 
+
+
+
+
     return(
         <>
-          <div className="orderwrapper">
-                   <div className="container">
-                    <div className="row">
-                      { order.map(item=>( <><div className="col">Reference_ID:{item.ref_id}</div>
-                        <div className="col">Order_ID:{item.order_id}</div>
-                        <div className="col"><h4>Your Order Done!</h4>
+          <div className="orderwrapper bg-success " >
+                   <div className="container-sm   " >
+                    <div className="row p-3 ">
+                        <div className="col  styleorder " >
+                            <div className="refid p-2" >Reference_ID: {orders[0]}</div>
+                            <div className="orderid p-2 mb-3" >Order_ID: {orders[1]}</div>
 
-<p>Your order for the product is done and don't share your Order_ID to anyone (  to call  customerservice and share only last fourdigit  ,when you have query on the product) further details we send the sms that contains the track_Your_order link .</p><p>Using the link you can track the product's shipping details.
-Thank you for  choosing our product! Have a Good Day.</p></div></>))}
-                    </div>
+                            
+                                <h4  >Your Order Done!</h4>
+                               <div className="para" style={{padding:"3%",lineHeight:'2'}} >Your order for the product is done and don't share your Order_ID to anyone <i>to call customerservice and share only last fourdigit, when you have query on the product</i> further details we send the sms that contains the track_Your_order link
+                               Using the link you can track the product's shipping details. Thank you for choosing our product! Have a Good Day.</div>
+                               </div>
+                        </div>
                    </div>
           </div>
+          <Footer/>
         </>
     )
 

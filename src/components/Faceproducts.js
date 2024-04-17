@@ -1,120 +1,85 @@
 import { useState,useEffect } from "react";
 import axios from 'axios';
-import {useNavigate} from "react-router-dom";
+import Apphead from "./Apphead";
+import Footer from "./AppFooter";
 
 
 
-const Faceproducts=({style ,style1})=>{
+const Faceproducts=({style ,style1,addcart,dis})=>{
 
     const[List,setList]=useState([]);
-    const navigate = useNavigate();
+ 
    
     const handleclick=(prop)=>{
      
-        const data1={id:prop,name:'face'}
+        const data1={id:prop,name:'face'};
+      
+        localStorage.setItem('Data', JSON.stringify(data1));
 
-        navigate("/Productframe", { state: data1 });
+        window.open("/Productframe", '_blank');
           
+    }
+    
+    const addtocart=(item)=>{
+          addcart(item);
     }
 
 useEffect(() => {
     const fetchData = async () => {
         try {
             const response = await axios.get("https://wbp.onrender.com/api/fproduct");
-            setList(response.data);
+            const updatedData = response.data.map(item => ({ ...item, prodata: 'face' }));
+            setList(updatedData);
         } catch (error) {
             console.error('Error fetching data:', error);
         }
     };
     fetchData();
-},[])
-    return(
+
+},[List])
+    return(<>
+
         <div className="Face_products" >
+        <div className="facehead " style={dis}><Apphead bg={{backgroundColor:"grey"}}/></div> 
             <div className="Face_products_list_wrapper">
-            <div className="Face_products_list " style={ style1 }>
+            <div className="Face_products_list " style={ style }>
             <div className="Face_products_contents_wrapper" style={ style }>
             { List.map(item=>(
-                <div  className="Face_products_contents"  id={item.id}>
-               
-
+                <div  className="Face_products_contents" style={ style1 }  id={item.id}>
+                   
+                         
+                          <div className="cardimg">
                           <div className="Fproducts_image_wrapper">
-                          <img src="./pictures/newarrival-1.png" alt='cleanser' />
+                          
+                          <img className="face" src={"https://wbp.onrender.com/api/getimage/"+item.id+"/face"} alt='cleanser' id="face" />
+                   
+                      <div className="back">
+                      <p>{item.des}</p>
                       </div>
-                      <div className="Fproducts_details">
-                          <h2>{item.name}</h2>
-                          <p>{item.des}</p>
-                          <pre>{item.price}</pre>
-                      </div>
-                      <div className="Fproducts_buttons">
-      <button className="buy" onClick={()=>handleclick(item.id)} target="_ablank" >BUY</button>
-                          <button>CART</button>
-                      </div>
-
+                     
                 </div>
+                </div>
+                      <div className="Fproducts_details" style={{width:"fit-content"}}>
+                          <h2 style={{width:"fit-content"}}>{item.name}</h2>
+                         
+                          <pre style={{width:"fit-content"}}>₹{item.price}</pre>
+                      </div>
+                      <div className="Fproducts_buttons" style={{width:"fit-content"}}>
+      <button className="buy" onClick={()=>handleclick(item.id)} target="_blank" >BUY</button>
+                          <button  onClick={()=>addtocart(item)}>CART</button>
+                      </div> </div>
+                      
                
                ))
               
             }
-                <div  className="Face_products_contents" id="Face_products_content_2">
-                <div className="Fproducts_image_wrapper">
-                <img src="./pictures/Moisturizer-1.png" alt='Moisturizer' />
-                </div>
-                <div className="Fproducts_details">
-                    <h2>FproductName</h2>
-                    <p>Fproducts_description</p>
-                    <pre>Price</pre>
-                </div>
-                <div className="Fproducts_buttons">
-                    <button>BUY</button>
-                    <button>CART</button>
-                </div>
-                </div>
-                <div className="Face_products_contents" id="Face_products_content_3">
-                <div className="Fproducts_image_wrapper">
-                <img src="./pictures/faceserum.png" alt='faceserum' />
-                </div>
-                <div className="Fproducts_details">
-                    <h2>FproductName</h2>
-                    <p>Fproducts_description</p>
-                    <pre>Price</pre>
-                </div>
-                <div className="Fproducts_buttons">
-                    <button>BUY</button>
-                    <button>CART</button>
-                </div>
-                </div>
-                <div className="Face_products_contents" id="Face_products_content_4">
-                <div className="Fproducts_image_wrapper">
-                <img src="./pictures/tone-1.png" alt='toner' />
-                </div>
-                <div className="Fproducts_details">
-                    <h2>FproductName</h2>
-                    <p>Fproducts_description</p>
-                    <pre>Price</pre>
-                </div>
-                <div className="Fproducts_buttons">
-                    <button>BUY</button>
-                    <button>CART</button>
-                </div>
-                </div>
-                <div className="Face_products_contents" id="Face_products_content_5">
-                <div className="Fproducts_image_wrapper">
-                <img src="./pictures/Sunscreen-1.png" alt='Sunscreen' />
-                </div>
-                <div className="Fproducts_details">
-                    <h2>FproductName</h2>
-                    <p>Fproducts_description</p>
-                    <pre>Price</pre>
-                </div>
-                <div className="Fproducts_buttons">
-                    <button>BUY</button>
-                    <button>CART</button>
-                </div>
-                </div>
+               
             </div>
             </div>
             </div>
         </div>
+        <div className="facefoot" style={dis}><Footer/></div>
+        </>
     )
 }
 

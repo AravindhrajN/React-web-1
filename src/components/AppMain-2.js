@@ -6,22 +6,24 @@ import { useState } from "react"
 
  
 const Newarrival= () =>{
-    return(
+    return(<>
     <img src="./pictures/newarrival-1.png"
       alt="hairserum"
       style={{width: '50%',margin:'2% 25%'
     }}
-    />);
+    />
+  <p className="text-white">Face serum</p></>);
    
 };
 const Bestselling= () =>{
-    return(
+    return(<>
     <img src="./pictures/bestsell-1.png"
       alt="bodycream"
-      style={{width: '90%',borderRadius:'50%',margin:'1rem'
-    }}
-   
-    />);
+      style={{width: '90%',borderRadius:'50%'
+    }} />
+    <p className="text-white"> Body cream</p>
+    </>
+   );
    
 };
 
@@ -41,7 +43,7 @@ return(<>
     <h2>Explore our products</h2>
     <div className="content-2">
     <div className="button-wrapper-2 row ">
-       <div className="row"> <button className="Newarrival   " onClick={()=>{handleButtonClick(false)}} >New Arrivals</button>
+       <div className="row"> <button className="Newarrival   " onClick={()=>{handleButtonClick(false)}} >New Arrival</button>
         <button className="Bestselling  " onClick={()=>{handleButtonClick(true)}} >Best Selling</button></div>
     </div>
     <div className="main2-subcontent-2">

@@ -1,0 +1,275 @@
+.contwrap{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  position: relative;
+    align-items: stretch;
+    border: none;
+   
+}
+
+.add{
+  width:auto;
+
+}
+.headorder {
+
+  padding: 4% 0%;
+  display: flex;
+flex-direction: row-reverse;
+font-size: 4rem;
+color: #f05d0ed1;
+
+
+}
+
+.headsummary{
+  font-size: 4rem;
+  color:rgb(239, 11, 171) ;
+ padding: 4% 0%;
+  text-align: start;
+ 
+}
+
+.addwrap{
+
+  padding: 1%;
+
+ 
+    text-align:center;
+    border-radius: 2%;
+      border:5px solid transparent;
+
+      flex-direction: column;
+      flex-wrap: wrap;
+ width: auto;
+   
+  
+}
+.userdata{
+
+  width: auto;
+  align-items:baseline;
+  display: flex;
+  flex-direction: row;
+
+  padding: 2%;
+border: none;
+
+
+   
+}
+.fig{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.figure-img{
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+  .userdata .text{
+
+   
+ 
+    text-align: center;
+ margin: 2%;
+    width: auto;
+    padding: 5%;
+    border-bottom: outset;
+     font-family:cursive;
+     font-size: normal;
+     border-radius: 10px;
+     background-color: aliceblue;
+     color: rgb(101, 174, 23);
+  }
+  .addwrap h2{
+  
+     font-family: fantasy;
+
+  color: rgb(4, 133, 90);  
+  
+  
+   
+  
+   }
+
+   .content{
+    padding-left: 2%;
+    background-color: rgb(234, 236, 129);
+    align-items: center;
+   }
+
+   .procont .price{
+       color:rgb(18, 21, 6);
+       font-size: 2rem;
+  
+   }
+   .procont {
+    
+    padding: 3%;
+    color:rgb(18, 21, 6);
+    font-size: 1rem;
+
+}
+   .procont h2{
+    color:rgb(90, 58, 5);
+    font-family: fantasy;
+}
+.procont button{
+  margin: 3%;
+  width: 20%;
+  font-size: 1rem;
+  border: 2px solid transparent;
+  border-radius: 10%;
+  background-color: rgb(246, 239, 232);
+  color:rgb(35, 81, 2);
+  font-family: fantasy;
+}
+
+.payment{
+  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  padding: 2%;
+
+}
+.quant{
+  padding: 2%;
+width: 100%;
+}
+
+.payment button{
+ padding: 3%;
+  width: fit-content;
+  border: 2px solid transparent;
+  border-radius:5%;
+  font-family: cursive;
+}
+.payment button:hover{
+  background-color:green; 
+ border:2px solid green;
+  color:white;
+}
+ 
+@media screen and (max-width:768px){
+  .addwrap{
+    padding: 1%;
+    align-items: normal;
+  text-align:start;
+  border-radius: 2%;
+    border:5px solid transparent;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+
+ 
+ 
+    
+}
+.userdata{
+
+  align-items: baseline;
+  display: flex;
+  flex-direction: row;
+
+  padding: 2%;
+border: none;
+ margin: 1%;
+
+  
+}
+.userdata .text{
+  width: auto;
+   margin: 2%;
+   padding: 3%;
+   border-bottom: outset;
+   font-family:cursive;
+   font-size: x-small;
+   border-radius: 10px;
+   background-color: aliceblue;
+   color: rgb(101, 174, 23);
+   text-align:center;
+ }
+ .addwrap h2{
+   font-size: medium;
+   font-family: fantasy;
+   width: fit-content;
+color: rgb(4, 133, 90);  
+
+
+ 
+
+ }
+ .procont {
+
+  color:#121506;
+  font-size: 0.8rem;
+
+}
+ .quant{
+  padding: 5%;
+width: 100%;
+}
+.procont button{
+  margin: 1%;
+  width: 30%;
+  font-size: 0.5rem;
+  border: 2px solid transparent;
+  border-radius: 5%;
+  background-color: rgb(246, 239, 232);
+  color:rgb(35, 81, 2);
+  font-family: fantasy;
+}
+.procont .price{
+  color:rgb(18, 21, 6);
+
+padding: 2%;
+  font-size: 1rem;
+
+}
+.payment{
+  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+padding: 1%;
+
+}
+
+.payment button{
+padding: 5%;
+margin: 2%;
+width: fit-content;
+font-size: smaller;
+border: 2px solid transparent;
+border-radius:2%;
+font-family: cursive;
+}
+
+.procont h2{
+  font-size:1rem;
+  color:rgb(90, 58, 5);
+  font-family: fantasy;
+}
+.headorder {
+
+  padding: 4% 0%;
+  display: flex;
+flex-direction: row-reverse;
+font-size: 2rem;
+color: #f05d0ed1;
+
+
+}
+
+.headsummary{
+  font-size: 2rem;
+  color:rgb(239, 11, 171) ;
+ padding: 4% 0%;
+  text-align: start;
+ 
+}
+
+}

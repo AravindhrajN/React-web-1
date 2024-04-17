@@ -1,16 +1,18 @@
 
-import { useLocation } from 'react-router-dom';
 import { useState,useEffect } from "react";
 import axios from 'axios';
 import {useNavigate} from 'react-router-dom';
 
 
+const displayform=()=>{
+  document.getElementById("id").style.display="flex";
+   window.alert("Plz enter details below");
+}
 
 
-const Productframe=()=>{
+const Productframe=({addcart})=>{
 
-  const location = useLocation();
-  const data = location.state;
+  const [data,setdata]=useState([]); 
 
   const[List,setList]=useState([]);
   const[user,setuser]=useState([]);
@@ -18,9 +20,16 @@ const Productframe=()=>{
   const navigate = useNavigate();
 
 
-   
+  const addtocart=(item)=>{
+    addcart(item);
+    navigate("/cart");
+  }
 
- 
+  useEffect(() => {
+    const stateData = JSON.parse(localStorage.getItem('Data'));
+    console.log(stateData); 
+    setdata(stateData);
+}, []);
  
 
 useEffect(() => {
@@ -33,7 +42,8 @@ useEffect(() => {
         try {
          
             const response = await axios.get("https://wbp.onrender.com/api/getproduct", { params });
-            setList(response.data);
+            const updatedData = response.data.map(item => ({ ...item, prodata: data.name }));
+            setList(updatedData);
             
            
         } catch (error) {
@@ -45,10 +55,10 @@ useEffect(() => {
 
 useEffect(() => {
   if (submitForm) {
-    navigate("/Ordersummary", { state: {user,List} });
-    setSubmitForm(false); // Reset the submitForm state after navigation
+    navigate("/Ordersummary", { state: {user,List,data} });
+    setSubmitForm(false); 
   }
-}, [submitForm, user, navigate,List]);
+}, [submitForm, user, navigate,List,data]);
 
 
 
@@ -122,62 +132,64 @@ const address=addressInput.value.trim();
     return(
    <>
   
- <div className="frame base">
-    <div className="container m-3 border border-2 border-danger">
-    {List.map(item => ( <div className="row">
-        <div className="col border border-2 border-primary ">
-        <figure className="figure p-3">
-  <img src="https://wbp.onrender.com/api/getimage" className="figure-img img-fluid rounded" alt="moisture" id={item.id}/>
-  <figcaption className="figure-caption">{item.name}</figcaption>
+ <div className="frame">
+    <div className="container-fulid m-3  framebase">
+    {List.map(item => ( <div className="row proframe" key={item.id}>
+        <div className=" col col-md-auto fig-1" >
+        <figure className="figure p-3" >
+  <img src={"https://wbp.onrender.com/api/getimage/"+item.id+"/"+data.name} className="figure-img img-fluid rounded" alt="moisture" id={item.id} />
+ 
 </figure>
-<p>{item.price}</p>
+
 
         </div>
-        <div className="col border border-2 border-success ">
+        <div className=" col col-md-6 figdetails  ">
+          <h1>{item.name}</h1>
+        <p className='price'>Price: ₹{item.price}</p>
             <p>{item.des} </p>
             <div className="applytype">
-                <h4>HOW TO APPLY</h4>
+                <h3>HOW TO APPLY</h3>
                 <p>By adding gutter modifier classes, you can have control over the gutter width in as well the inline as block direction. Also requires the $enable-grid-classes Sass variable to be enabled (on by default).</p>
+                <div className="purchasedetails"><button className=' m-2' onClick={()=>displayform()}>Purchase</button>
+                <button className=' m-2' onClick={()=>addtocart(item) }  target="_ablank">Cart</button></div>
             </div>
            
         </div>
       </div>))}
    
-      <div className="row  bg-success">
+      <div className="row form" id="id" style={{display:"none"}}>
+      <h3 className='formhead'>Enter Yours Details</h3>
+      <form onSubmit={validateForm} className=' col formdetails'>
   
-      <h2>Form Validation Example</h2>
-
-
-      <form onSubmit={validateForm} >
   <div>
     <label htmlFor="name">Name:</label>
     <input type="text" id="name" name="name" required />
-    <div className="error-message" id="name-error"></div>
+
   </div>
   <div>
-    <label htmlFor="mobile">Mobile Number:</label>
+    <label htmlFor="mobile">Mobile No:</label>
     <input type="text" id="mobile" name="phone" required pattern="[0-9]{10}" />
-    <div className="error-message" id="mobile-error"></div>
+ 
   </div>
   <div>
     <label htmlFor="city">City:</label>
     <input type="text" id="city" name="city" required />
-    <div className="error-message" id="city-error"></div>
+  
   </div>
   <div>
     <label htmlFor="state">State:</label>
     <input type="text" id="state" name="state" required />
-    <div className="error-message" id="state-error"></div>
+ 
   </div>
   <div>
     <label htmlFor="pincode">Pincode:</label>
     <input type="text" id="pincode" name="pincode" required pattern="[0-9]{6}" />
-    <div className="error-message" id="pincode-error"></div>
+   
   </div>
   <div>
     <label htmlFor="Address">Address:</label>
-    <textarea id="Address" name="Address" rows={3} cols={6} required></textarea>
-    <div className="error-message" id="address-error"></div>
+    <textarea id="Address" name="Address" rows={5} cols={30} required></textarea>
+ 
   </div>
   <button type="submit" >Submit</button>
 </form>

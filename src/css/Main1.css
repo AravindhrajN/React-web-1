@@ -2,22 +2,201 @@
   width: 100%;
   position: relative;
 }
+.Maincontent-1{
+  position: relative;
+  z-index: 1000;
+  background-color: rgba(17, 74, 80, 0.821);
+  
+ 
+}
 .backimg{
+  padding: 8%;
     width: 100%;
     background-size:cover;
  
 }
+.ingri{
+  display: flex;
+  align-items: center;
+  padding: 5%;
+
+}
+.ingri p{
+font-family: fantasy;
+font-size:5rem;
+margin-bottom: 5%;
+
+padding-left: 2%;
+
+}
 
  .sideimg{
-    bottom: 0%;
-    right: 0%;
-    border-radius: 5%;
-    position:absolute;
+  padding: 1%;
+ 
+  margin-bottom: 5%;
+  
 }
+ .sideimg2{
+  padding: 1%;
+ 
+  margin-bottom: 5%;
+   
+}
+
 .cardfirst{
+
+  background-color: transparent;
+  border: none;
     top:50%;
-    left: 50%;
-    width: 50%;
+    left: 55%;
+    width: 40%;
    position: absolute;
-   z-index: 1000;
+   z-index: 2000;
+   
 }
+.cardfirst .card-body{
+
+  font-family:'Courier New', Courier, monospace;
+  padding: 2%;
+  padding-right: 5%;
+}
+.cardfirst .card-body .blockquote  {
+  padding: 1% ;
+  padding-right: 5%;
+  margin: auto;
+  font-size: 1.2rem;
+  line-height: 3.5vh;
+  color: aliceblue;
+}
+.cardfirst .card-body .blockquote .blockquote-footer {
+  padding: 1%;
+  margin: auto;
+  color: aliceblue;
+}
+
+@media screen and (max-width:575px) {
+
+
+  .cardfirst .card-body .blockquote  {
+    padding: 1% ;
+    padding-right: 5%;
+    margin: auto;
+    font-size: xx-small;
+    line-height: 1.6vh;
+    color: aliceblue;
+  }
+  .backimg{
+    padding: 5%; 
+      width: 100%;
+      background-size:cover;
+   
+  }
+  .cardfirst{
+
+    background-color: transparent;
+    border: none;
+      top:20%;
+      left: 55%;
+      width: auto;
+     position: absolute;
+     z-index: 2000;
+     
+  }
+  .cardfirst .card-body{
+
+    font-family:'Courier New', Courier, monospace;
+    padding: 2% 8%;
+  }
+  .cardfirst .card-body .blockquote  p {
+   margin-bottom: 1%;
+  }
+  
+  .ingri{
+    padding: 5%;
+  }
+.ingri p{
+  font-family: fantasy;
+  font-size:1.2rem;
+  margin-bottom: 5%;
+  padding-left: 2%;
+  
+  }
+  
+   .sideimg{
+    padding: 1%;
+   width: 20%;
+    margin-bottom: 5%;
+    
+  }
+   .sideimg2{
+    padding: 1%;
+   width: 20%;
+    margin-bottom: 5%;
+     
+  }
+  
+}
+  @media screen and (min-width:576px) and (max-width:974px) {
+
+
+    .ingri{
+      padding: 5%;
+    }
+
+    .cardfirst .card-body .blockquote  {
+  padding-right: 5%;
+      margin: auto;
+      font-size: 0.8rem;
+      line-height: 2.8vh;
+      color: rgb(212, 220, 227);
+    }
+    .backimg{
+      padding: 2%; 
+        width: 100%;
+        background-size:cover;
+     
+    }
+    .cardfirst{
+  
+      background-color: transparent;
+      border: none;
+        top:20%;
+        left: 55%;
+        width: auto;
+       position: absolute;
+       z-index: 2000;
+       
+    }
+    .cardfirst .card-body{
+  
+      font-family:'Courier New', Courier, monospace;
+      padding:  4%;
+    }
+    .cardfirst .card-body .blockquote  p {
+     margin-bottom: 1%;
+    }
+
+
+    .ingri p{
+      font-family: fantasy;
+      font-size:3rem;
+      margin-bottom: 5%;
+      
+      padding-left: 2%;
+      
+      }
+      
+       .sideimg{
+        padding: 1%;
+        width: 15%;
+        margin-bottom: 5%;
+        
+      }
+       .sideimg2{
+        padding: 1%;
+        width: 15%;
+        margin-bottom: 5%;
+         
+      }
+      
+  }

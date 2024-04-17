@@ -1,7 +1,8 @@
 import { useState } from "react"
 import Faceproducts from "./Faceproducts"
 import Bodyproducts from "./Bodyproducts";
-
+import Footer from "./AppFooter";
+import Apphead from "./Apphead";
 const Products=()=>{
 
 const[clicked,setclicked]=useState(true);
@@ -30,7 +31,8 @@ const HandleClicked=(value)=>{
     }
   
     return(
-        <><div className='Probg'><div className="Product-wrapper">
+        <><Apphead/>
+        <div className='Probg'><div className="Product-wrapper">
         <div className="prohead-container"> <div className="row">
             <div className="col-6">
         <button style={Style1}  onClick={()=>{HandleClicked(true);changesytle1(); } } >Face </button>
@@ -39,11 +41,11 @@ const HandleClicked=(value)=>{
             <button style={Style2}  onClick={()=>{HandleClicked(false);changeStyle2();}}>Body </button>
             </div>
          </div></div><div className="Products-list-wrapper">
-               {clicked?<Faceproducts/>:<Bodyproducts/>}
+               {clicked?<Faceproducts dis={{display:"none"}}/>:<Bodyproducts dis={{display:"none"}}/>}
          </div>
          </div>
          </div>
-     
+       <Footer/>
         </>
     )
 }

@@ -1,13 +1,13 @@
 .main2{
     width: 100%;
     margin: auto;
-    margin-top: 2rem;
+    padding-top: 2rem;
     border: 2px solid transparent;      
-    background-color:rgb(234, 195, 185) ;
+    background-color: rgba(17, 74, 80, 0.821);
 }
 .main2 h2{
     border:0px solid  transparent; 
-    border-top:10px solid  rgb(234, 195, 185); 
+    border-top:10px solid  rgba(17, 74, 80, 0.821); 
     width: auto;
     text-align: center;
     padding: 1rem;
@@ -22,24 +22,32 @@ font-weight: 600;
     width: 25%;
     margin: 2%  auto 0;
 
-    padding: 0.5rem;
-    padding-right: 0rem;
-    padding-left: 0.9rem;
-}
-.main2 button{
-    margin: 1rem 1.5rem;
-    width:35%;
-    color: rgb(168, 36, 36);
-    background-color:rgb(236, 200, 190)  ;
-    padding: 2rem;
    
 }
+.main2 button{
+    margin: 3rem 1.5rem;
+    width:35%;
+    color: rgb(251, 249, 249);
+    background-color:rgba(17, 74, 80, 0.821);
+    padding: 1rem;
+    border:2px solid transparent;
+    font-size:small;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 8%;
+   
+}
+.main2 button:hover{
 
+  background-color: rgb(251, 249, 249);
+  color:rgba(17, 74, 80, 0.821)  ;
+ 
+ 
+}
 .img-wrapper{
     
     width: 25%;
     margin: 1% auto;
-    
+    margin-bottom: 2%;
     border-radius: 2%;
 
 }
@@ -47,31 +55,12 @@ font-weight: 600;
     padding:2rem 0;
    width: 100%;
     
-    background-color:rgb(234, 195, 185);
-animation:imgcontainer 6s linear infinite;
-border-image: linear-gradient(90deg, white red); 
-border-image-slice: 1;
-border-image-width: 0.2rem;
+ background-color: rgba(17, 74, 80, 0.821);
+
       
 }
 
-@keyframes imgcontainer {
-    0% {
-        border-image-source: linear-gradient(90deg,white, red); 
-      }
-      25% {
-        border-image-source: linear-gradient(180deg,white,red);
-      }
-      50% {
-        border-image-source: linear-gradient(270deg,white,red); 
-      }
-      75% {
-        border-image-source: linear-gradient(0deg, white, red); 
-      }
-      100% {
-        border-image-source: linear-gradient(90deg, white, red); 
-      }
-  }
+
 .main2-subcontent-2{
     display: flex;
     text-align: center;
@@ -79,21 +68,23 @@ border-image-width: 0.2rem;
 }
 .main2-l-img{
     width: 50%;
+    margin-bottom: 2%;
     animation: slidebottom 1s ;
   
 }
 .main2-l-img img{
-    width: 70%;
+    width: 50%;
     border-radius: 50%;
    
 }
 .main2-r-img{
+  margin-bottom: 2%;
     width: 50%;
     animation: slidebottom 1s ;
     
 }
 .main2-r-img img{
-    width: 70%;
+    width: 50%;
     border-radius: 50%;
     
 }
@@ -114,56 +105,9 @@ margin: auto;
 flex-wrap: nowrap;
 
 }
-.Newarrival{
-animation: newarrival 4s linear infinite;
-border-image: linear-gradient(90deg, white, red); 
-border-image-slice: 1;
-border-image-width: 0.2rem;
 
-}
 
-@keyframes newarrival {
-    0% {
-        border-image-source: linear-gradient(270deg,white, red); 
-      }
-      25% {
-        border-image-source: linear-gradient(0deg,white, red);
-      }
-      50% {
-        border-image-source: linear-gradient(90deg, white, red); 
-      }
-      75% {
-        border-image-source: linear-gradient(180deg,white, red); 
-      }
-      100% {
-        border-image-source: linear-gradient(270deg, white, red); 
-      }
-  }
-  .Bestselling{
-    border-image: linear-gradient(90deg, white, red); 
-    border-image-slice: 1;
-    animation: bestselling 4s linear infinite;
-    border-image-width: 0.2rem;
-    
-  }
   
-  @keyframes bestselling {
-    0% {
-        border-image-source: linear-gradient(90deg,white, red); 
-      }
-      25% {
-        border-image-source: linear-gradient(180deg,white , red);
-      }
-      50% {
-        border-image-source: linear-gradient(270deg, white, red); 
-      }
-      75% {
-        border-image-source: linear-gradient(0deg, white, red); 
-      }
-      100% {
-        border-image-source: linear-gradient(90deg, white, red); 
-      }
-  }
 @media (max-width:480px){
    .main2{
     margin-top: 0%;
@@ -175,11 +119,11 @@ border-image-width: 0.2rem;
       
       font-size:0.5em;
         width: auto;
-      margin: 0.5rem;
+      margin: 1rem 0.5rem;
         padding: 1rem;
         
-        color: rgb(162, 56, 56);
-        background-color:rgb(234, 195, 185)  ;
+        color: rgb(250, 248, 248);
+        background-color:rgba(17, 74, 80, 0.821);
     
      
      
@@ -191,8 +135,9 @@ border-image-width: 0.2rem;
   
   
        
-        width: 90%;
-        margin: 1rem ;
+        width: 50%;
+        padding: 5%;
+        margin: auto ;
       
           
     }
@@ -203,9 +148,11 @@ border-image-width: 0.2rem;
         
     }
     .img-wrapper{
-        width: auto;
+        width:100%;
+       
         margin:auto;
-        background-color:rgb(234, 195, 185)  ;
+        margin-bottom: 5%;
+       
        
     
     }

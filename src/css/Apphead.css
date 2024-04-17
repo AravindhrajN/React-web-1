@@ -1,3 +1,39 @@
+.navbarcss{
+    background-color: rgb(9, 11, 23);
+}
+.dropdown-menu{
+    position: absolute;
+    z-index: 5000;
+    background-color: white;
+    padding:0% !important;
+    
+    
+}
+.dropdown-menu hr{
+    margin:  0% !important;
+  
+}
+.navbar-brand{
+      background-color: transparent;
+    border:none;
+}
+.nav-link{
+    color:#FFFFC2;
+    font-size: large;
+    border: 2px solid transparent;
+    border-radius: 2%;
+}
+.nav-link:hover,.dropdown-item:hover{
+    background-color:#FFFFC2;
+    color: goldenrod;
+    border: 2px solid rgb(222, 196, 130);
+   
+}
+.dropdown-item{
+    color:goldenrod;
+ 
+}
+
 @media  screen and (max-width:768px){
 
     .firstcont{
