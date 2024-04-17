@@ -87,7 +87,7 @@
     }
     .Mainprocard{
         width: 50%;
-     
+       padding: 3% 0%;
     }
     .Mainprocard .card {
         width: 90%;
@@ -98,7 +98,6 @@
     .maincard .card-title{
         margin-top: 5%;
         font-weight: bolder;
-        font-size: 1.8rem;
         font-family: fantasy;
  }
  
@@ -112,7 +111,7 @@
  
 
  .maincard{
-    padding:0% 5%;
+    padding:0% 2%;
  }
  .maincardbts {
  width: fit-content;
