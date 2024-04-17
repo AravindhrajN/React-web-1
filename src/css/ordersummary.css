@@ -269,7 +269,7 @@ color: #f05d0ed1;
 
 .headsummary{
   font-size: 2rem;
-  color:rgb(239, 11, 171) ;
+  color: #D81B60; 
  padding: 4% 0%;
   text-align: start;
  
@@ -285,6 +285,9 @@ color: #f05d0ed1;
     flex-wrap: wrap;
     position: relative;
 }
+.userdata .text{
+  font-family: emoji;
+}
 .procont button {
   background-color: #f6efe8;
   border: 2px solid transparent;
@@ -294,10 +297,21 @@ color: #f05d0ed1;
   font-size: 1rem;
   margin:3%;
   /* width: 30%; */
-  width: 100%;
-  padding: 0% 20%;
+  width: 40%;
+  padding: 0% 10%;
+}
+.procont {
+  width: fit-content;
+    margin: auto;
+    font-weight: bolder;
+}
+.procont .price{
+  font-weight: bolder;
+  width: fit-content;
+    margin: auto;
 }
 .quant p{
+  font-weight: normal;
   margin: auto;
   width: fit-content;
 }
