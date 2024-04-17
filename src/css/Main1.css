@@ -116,7 +116,8 @@ padding-left: 2%;
   }
 .ingri p{
   font-family: fantasy;
-
+  font-weight: bolder;
+  font-size:2rem;
   margin-bottom: 5%;
   padding-left: 2%;
   
