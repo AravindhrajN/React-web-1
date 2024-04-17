@@ -34,7 +34,7 @@ import { Link } from "react-router-dom";
             </ul>
           </li>
           <li className="nav-item    m-3 me-4 ms-4 ">
-            <button className="nav-link p-3   " >Care&Tips</button>
+          <Link to="/products" target="a_blank"style={{textDecorationLine:"none"}}><button className="nav-link p-3 " >Care&Tips</button></Link>
           </li>
       
         </ul>
