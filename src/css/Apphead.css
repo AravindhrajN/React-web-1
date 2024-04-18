@@ -23,6 +23,11 @@
     border: 2px solid transparent;
     border-radius: 2%;
 }
+.nav-link:focus,.navbar-nav .nav-link.show{
+   
+    color: goldenrod;
+  
+}
 .nav-link:hover,.dropdown-item:hover{
     background-color:#FFFFC2;
     color: goldenrod;
@@ -33,7 +38,9 @@
     color:goldenrod;
  
 }
-
+.navbar-nav{
+    justify-content: space-evenly;
+}
 @media  screen and (max-width:768px){
 
     .firstcont{
@@ -52,5 +59,12 @@
     }
     .nav-link{
         padding: 0.6em !important;
+    }
+    .navbar-nav .dropdown-menu{
+        position: absolute;
+        background-color: white;
+        padding:0% !important;
+        
+        
     }
 }

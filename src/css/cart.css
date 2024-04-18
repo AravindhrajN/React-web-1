@@ -124,3 +124,50 @@
     color: white;
     background-color: red;
 }
+@media screen and (max-width:576px){
+    
+    .cartitem {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .cartfig {
+        width: 40%;
+    }
+
+ .cartitem p {
+    margin: 2%;
+    /* padding: 2%; */
+    /* margin-bottom: 1rem; */
+    /* margin-top: 0; */
+}
+.quantity {
+    padding: 2% 0%;
+    width: 100%;
+    align-items: center;
+    align-items: baseline;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.quantity button {
+    background-color: #fff;
+    border: 2px solid green;
+    border-radius: 10%;
+    color: #085c06;
+    padding: 0 2%; 
+}
+.quantity p {
+    /* margin: 0 30%; */
+    margin: 2%;
+    padding: 0% 2%;
+}
+.purchase {
+    padding: 2%;
+    display: flex;
+    /* width: 20%; */
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+}

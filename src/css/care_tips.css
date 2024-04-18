@@ -2,13 +2,35 @@
     padding: 2%;
 }
 .carecont h1{
-    padding: 2%;
+ 
+    font-size: 5rem;
+    font-family: fantasy;
+    color: rgb(188, 223, 45);
 }
+
 .carecont h2{
-    padding: 2%;
+    padding:1% 0%;
+    color: black;
+
 }
 .carecont p{
-    padding: 2%;
+    padding: 0% 1%;
 }
  
- 
+ @media screen and (max-width:576px) {
+    .carecont h1{
+        padding: 2%;
+        font-size: 3rem;
+        font-weight: bolder;
+        font-family: fantasy;
+        color: rgb(188, 223, 45);
+    }
+    .carecont h2{
+        padding:2% 0%;
+        color: black;
+        font-weight: bold;
+    }
+    .carecont p{
+        padding: 1%;
+    }
+ }

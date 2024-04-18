@@ -6,15 +6,14 @@ const CareTips=()=>{
 
     return(
 
-  <div className="conatiner-fluid carecont">
- <h1>Care & Tips for Skincare Products</h1>
+  <div className="conatiner-fluid carecont text-white bg-secondary">
+ <h1>Care & Tips.</h1>
 
-<h2>1. Face Serum:</h2>
-
+<h2 >1. Face Serum:</h2>
 <p>Apply a small amount of serum to cleansed skin before moisturizing.
 Gently massage the serum onto your face and neck in upward motions.
 Allow the serum to fully absorb into the skin before applying additional products.
-Use serum daily for best results, and follow with sunscreen during the day.
+Use serum daily for best results, and follow with sunscreen during the day.</p>
 
 <h2>2. Cleanser:</h2>
 
@@ -25,7 +24,7 @@ Cleanse your face twice daily, morning and night, to remove impurities and keep 
 
 <h2>3. Moisturizer:</h2>
 
-Choose a moisturizer that matches your skin type and concerns (hydrating, anti-aging, mattifying).
+<p>Choose a moisturizer that matches your skin type and concerns (hydrating, anti-aging, mattifying).
 Apply moisturizer to cleansed and toned skin, gently massaging it in until fully absorbed.
 Use moisturizer twice daily, morning and night, to keep your skin hydrated and nourished.
 Don't forget to moisturize your neck and décolletage as well, as these areas also require hydration.</p>
