@@ -174,4 +174,8 @@
    
     padding: 0 2%;
 }
+.cartitem p:nth-child(2) {
+    font-family: auto;
+    font-size: large;
+}
 }
