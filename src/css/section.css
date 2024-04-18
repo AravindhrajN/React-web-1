@@ -18,8 +18,7 @@
        font-family: fantasy;
 }
 .maincard .cardtext{
-    font-family: "Dosis", sans-serif;
-  font-optical-sizing: auto;
+    font-family: cursive;
     
 }
 .maincardbts {
@@ -61,7 +60,8 @@
 
 
  .maincard .cardtext{
-     font-family: cursive;
+    font-family: "Dosis", sans-serif;
+    font-optical-sizing: auto;
      font-size: 0.5rem;
  }
  .maincardbts {
@@ -106,7 +106,8 @@
 
 
  .maincard .cardtext{
-     font-family: cursive;
+    font-family: "Dosis", sans-serif;
+    font-optical-sizing: auto;
     
      margin-bottom: 0%;
  }
