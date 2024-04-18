@@ -34,7 +34,7 @@ useEffect(() => {
     if (List.length === 0) {
         fetchData();
     }
-},[])
+},[List])
    
 
     return(

@@ -27,7 +27,7 @@ import Faceproducts from './components/Faceproducts';
 import Bodyproducts from './components/Bodyproducts';
 import Productframe from './components/Productframe';
 import Ordersummary from './components/Ordersummary';
-import Care_Tips from './components/Care&Tips';
+import CareTips from './components/CareTips';
 
 
 function App() {
@@ -110,7 +110,7 @@ const addtocart=(product)=>{
           ></Route>
            <Route
               path="/care_tips"
-              element={<Care_Tips />}
+              element={<CareTips />}
           ></Route>
           </Routes>
       
