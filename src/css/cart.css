@@ -170,4 +170,8 @@
     flex-direction: row;
     justify-content: space-evenly;
 }
+.quantity button:last-child {
+   
+    padding: 0 2%;
+}
 }
