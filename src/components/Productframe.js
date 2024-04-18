@@ -149,7 +149,7 @@ const address=addressInput.value.trim();
             <p>{item.des} </p>
             <div className="applytype">
                 <h3>HOW TO APPLY</h3>
-                <p>1)Face_products:Take sufficient quantity of product and massage into face and neck until it is fully absorbed.<br/>2)Body_products:Take sufficient quantity of product and apply on body.and more to know <Link to="/care_tips" target="_balnk">Click Care&Tips </Link></p>
+                <p>1) Face_products:Take sufficient quantity of product and massage into face and neck until it is fully absorbed.<br/>2) Body_products:Take sufficient quantity of product and apply on body.and more to know <Link to="/care_tips" target="_balnk">Click Care&Tips </Link></p>
                 <div className="purchasedetails"><button className=' m-2' onClick={()=>displayform()}>Purchase</button>
                 <button className=' m-2' onClick={()=>addtocart(item) }  target="_ablank">Cart</button></div>
             </div>
