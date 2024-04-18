@@ -178,4 +178,7 @@
     font-family: auto;
     font-size: large;
 }
+.cartfig img {
+    width: 100%;
+}
 }
